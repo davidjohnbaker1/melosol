@@ -1,0 +1,74 @@
+!!! OTL: Berkowitz210
+!!! Chapter: 1
+!!! Section: II
+!!! Page: 46
+!!! Mode: 
+!!! Encoder: DJB
+**kern
+*staff1
+*I"Piano
+=1-
+*clefC3
+*k[f#c#]
+*D:
+*M6/8
+8r
+8r
+8r
+8r
+8f#\L
+8g\J
+=2
+8.a\L
+16f#\K
+8d\J
+8e\L
+8f#\
+8g\J
+=3
+8.f#\L
+16e\K
+8d\J
+4e\
+8A/
+=4
+8B\L
+8c#\
+8d\J
+8e\L
+8f#\
+8g\J
+=5
+4.f#\
+8e\
+8r
+16d\LL
+16e\JJ
+=6
+8.f#\L
+16e\K
+8f#\J
+8g\L
+8f#\
+8g\J
+=7
+!!linebreak:original
+8a\L
+16g\L
+16f#\
+16g\
+16a\JJ
+4.b\
+=8
+8a\L
+8g\
+8f#\J
+8.e\L
+16g\K
+8f#\J
+=9
+4.e\
+8d\
+4r
+==
+*-

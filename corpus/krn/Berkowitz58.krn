@@ -1,0 +1,65 @@
+!!! OTL: Berkowitz58
+!!! Chapter: 1
+!!! Section: I
+!!! Page: 16
+!!! Mode: 
+!!! Encoder: DJB
+**kern
+*staff1
+*I"Piano
+=1-
+*clefG2
+*k[]
+*C:
+*M4/4
+4b\
+4f/
+4b\
+4dd\
+=2
+8ff\L
+8ee\
+8dd\
+8cc\J
+4b\
+4r
+=3
+8cc/L
+8b/
+8a/
+8g/J
+4f/
+4dd\
+=4
+8cc\L
+8b\
+8cc\
+8dd\J
+8cc\L
+8b\J
+4a/
+=5
+4b\
+4f/
+4dd\
+4b\
+=6
+8cc\L
+8b\
+8a\
+8b\J
+2cc\
+=7
+8b\L
+8a\
+8b\
+8cc\J
+4dd\
+4cc\
+=8
+!!linebreak:original
+4b\
+4f/
+2b\
+==
+*-

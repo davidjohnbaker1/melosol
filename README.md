@@ -17,4 +17,6 @@ This will include the following:
 * [ ] Add git ignores
 * [ ] Set up RProjec
 * [ ] Start papaja
+* [ ] Import Fantastic Meta-data
+* [ ] Document Fantastic Version 
  

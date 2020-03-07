@@ -1,0 +1,75 @@
+!!! OTL: Literature99
+!!! Chapter: 5
+!!! Section: III
+!!! Page: 367
+!!! Mode: 
+!!! Encoder: DJB
+**kern
+*staff1
+*I"Piano
+=1-
+*clefC3
+*k[f#c#]
+*D:
+*M3/4
+8f#\
+4e\
+[8e\
+16e\LL]
+16f#\
+16g\
+16e\JJ
+=2
+8g\
+4f#\
+[8f#\
+16f#\LL]
+16g\
+16a\
+16f#\JJ
+=3
+8a\
+4g\
+8a\
+8b\L
+8cc#\J
+=4
+8ee\
+4dd\
+16dd\LL
+16cc#\JJ
+16b\LL
+16a\
+16g\
+16f#\JJ
+=5
+8f#\
+4e\
+[8e\
+16e\LL]
+16f#\
+16g\
+16e\JJ
+=6
+8g\
+4f#\
+[8f#\
+16f#\LL]
+16g\
+16a\
+16f#\JJ
+=7
+!!linebreak:original
+8a\
+4g\
+16b\LL
+16g\JJ
+16f#\LL
+16e\
+16d\
+16c#\JJ
+=8
+2e\
+4d\
+==
+*-

@@ -1,0 +1,63 @@
+!!! OTL: Berkowitz125
+!!! Chapter: 1
+!!! Section: I
+!!! Page: 29
+!!! Mode: 
+!!! Encoder: DJB
+**kern
+*staff1
+*I"Piano
+*clefC3
+*k[b-e-]
+*g:
+*M4/4
+4d\
+=1
+4g\
+4b-\
+4a\
+8g\L
+8f#\J
+=2
+4g\
+4d\
+2e-\
+=3
+4d\
+8g\L
+8b-\J
+4dd\
+8cc\L
+8b-\J
+=4
+4.a\
+16cc\LL
+16b-\JJ
+4a\
+8r
+8d\
+=5
+4g\
+4b-\
+4a\
+8g\L
+8f#\J
+=6
+4g\
+4d\
+2e-\
+=7
+!!linebreak:original
+4d\
+8g\L
+8b-\J
+4dd\
+8cc\L
+8b-\J
+=8
+4.a\
+8b-\
+4g\
+4r
+==
+*-

@@ -1,0 +1,73 @@
+!!! OTL: Berkowitz330
+!!! Chapter: 1
+!!! Section: III
+!!! Page: 80
+!!! Mode: 
+!!! Encoder: DJB
+**kern
+*staff1
+*I"Piano
+=1-
+*clefF4
+*k[f#c#]
+*b:
+*M2/4
+16B\LL
+16A#\
+16B\
+16A#\JJ
+16B\LL
+16F#\
+16G#\
+16A#\JJ
+=2
+16B\LL
+16A#\
+16B\
+[16F#\JJ
+4F#\]
+=3
+16G\LL
+16F#\
+16G\
+16F#\JJ
+16E/LL
+16D/
+16C#/
+16BB/JJ
+=4
+16AA#/LL
+16BB/
+16BB#/
+[16C#/JJ
+4C#/]
+=5
+16B\LL
+16c#\
+16d#\
+[16B\JJ
+4B\]
+=6
+16G#\LL
+16A#\
+16B\
+[16F#\JJ
+4F#\]
+=7
+!!linebreak:original
+16E\LL
+16F#\
+16G\
+16F#\JJ
+16E/LL
+16D/
+16C#/
+16BB/JJ
+=8
+16C#/LL
+16D/
+16C#/
+[16BB/JJ
+4BB/]
+==
+*-

@@ -1,0 +1,75 @@
+!!! OTL: Berkowitz332
+!!! Chapter: 1
+!!! Section: III
+!!! Page: 81
+!!! Mode: 
+!!! Encoder: DJB
+**kern
+*staff1
+*I"Piano
+=1-
+*clefG2
+*k[b-]
+*d:
+*met(c|)
+*M2/2
+8.a/L
+16g#/K
+8.a/
+16b-/Jk
+2gn/
+=2
+8.g/L
+16f#/K
+8.g/
+16a/Jk
+2fn/
+=3
+8.e/L
+16d#/K
+8e/
+8f/J
+8f#/L
+8g/
+8g#/
+8a/J
+=4
+8.dd\L
+16cc#\K
+8ccn\
+8bn\J
+8b-/L
+8g/
+8e/
+8c#/J
+=5
+!!linebreak:original
+8.a/L
+16b-/K
+8.a/
+16g#/Jk
+4gn/
+4r
+=6
+8.g/L
+16b-/K
+8.a/
+16g/Jk
+2f#/
+=7
+8.f/L
+16e/K
+8f/
+8A/J
+8b-/L
+8g/J
+8r
+8c#/
+=8
+8a/L
+8Bn/
+8c/
+8c#/J
+2d/
+==
+*-

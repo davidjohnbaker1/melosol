@@ -1,0 +1,64 @@
+!!! OTL: Berkowitz176
+!!! Chapter: 1
+!!! Section: I
+!!! Page: 40
+!!! Mode: 
+!!! Encoder: DJB
+**kern
+*staff1
+*I"Piano
+=1-
+*clefG2
+*k[]
+*C:
+*M6/8
+8cc\L
+8b\
+8cc\J
+8ee\L
+8dd\
+8cc\J
+=2
+4ee\
+8cc\
+4.a/
+=3
+8a\L
+8cc\
+8ee\J
+8ff\L
+8.ee\
+16dd\Jk
+=4
+8dd\L
+8ee\
+8ff\J
+4gg\
+8r
+=5
+8cc\L
+8dd\
+8ee\J
+4gg\
+8ff\
+=6
+8ee\L
+8cc\
+8a\J
+4ff\
+8ee\
+=7
+8dd\L
+8ee\
+8ff\J
+8ff\L
+8.ee\
+16dd\Jk
+=8
+!!linebreak:original
+8gg\L
+8ee\
+8dd\J
+4.cc\
+==
+*-

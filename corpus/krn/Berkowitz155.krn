@@ -1,0 +1,70 @@
+!!! OTL: Berkowitz155
+!!! Chapter: 1
+!!! Section: I
+!!! Page: 35
+!!! Mode: 
+!!! Encoder: DJB
+**kern
+*staff1
+*I"Piano
+=1-
+*clefG2
+*k[b-]
+*d:
+*M6/8
+8dd\L
+8ee\
+8ff\J
+8ff\L
+8gg\
+8aa\J
+=2
+8.bb-\L
+16gg\K
+8ee\J
+8bb-\L
+8gg\
+8ee\J
+=3
+8.cc#\L
+16dd\K
+8ee\J
+8cc#\L
+8dd\
+8ee\J
+=4
+4dd\
+8ee\
+4ff\
+8r
+=5
+8ee\L
+8gg\
+8bb-\J
+8aa\L
+8gg\
+8ee\J
+=6
+8ff\L
+16gg\L
+16ff\
+16ee\
+16dd\JJ
+4cc#\
+8a/
+=7
+!!linebreak:original
+8dd\L
+8ee\
+8ff\J
+8gg\L
+8aa\
+8bb-\J
+=8
+8.aa\L
+16gg\L
+16ee\
+16ff\JJ
+4.dd\
+==
+*-

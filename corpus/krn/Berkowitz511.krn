@@ -1,0 +1,70 @@
+!!! OTL: Berkowitz511
+!!! Chapter: 1
+!!! Section: IV
+!!! Page: 128
+!!! Mode: 
+!!! Encoder: DJB
+**kern
+*staff1
+*I"Piano
+=1-
+*clefC4
+*k[b-]
+*F:
+*M4/4
+4f\
+4F/
+4.B-\
+16c\LL
+16d\JJ
+=2
+8c\L
+8B-\
+8A\
+8G\J
+4A\
+4F/
+=3
+4f\
+4F/
+4.d-\
+16e-\LL
+16d-\JJ
+=4
+*M3/4
+8c\L
+8B-\J
+8A/L
+8G/J
+4F/
+=5
+8d\L
+8c\J
+8B-\L
+8A\J
+4G/
+=6
+8e\L
+8d\J
+8c\L
+8B-\J
+4A\
+=7
+*M4/4
+4f\
+4F/
+[2d-\
+=8
+!!linebreak:original
+8d-\L]
+16e-\L
+16d-\JJ
+8c\L
+8B-\J
+4A\
+4G/
+=9
+2F/
+2r
+==
+*-
