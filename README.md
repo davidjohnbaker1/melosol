@@ -20,3 +20,9 @@ This will include the following:
 * [ ] Import Fantastic Meta-data
 * [ ] Document Fantastic Version 
  
+## Discussion Points
+
+* [FAIR Principles](https://www.go-fair.org/fair-principles/)
+* Generation of Dataset (3-6K)
+* Characteristics (3-6K)
+* Data report is only 2K  
