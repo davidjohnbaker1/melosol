@@ -11,4 +11,10 @@ This will include the following:
 * Descriptives of Dataset 
 * Essen and Other Folk Songs for Comparions 
 
+## To Do 
+
+* [ ] Import MeloSol 
+* [ ] Add git ignores
+* [ ] Set up RProjec
+* [ ] Start papaja
  
