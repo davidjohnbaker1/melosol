@@ -25,6 +25,23 @@ This will include the following:
 * [FAIR Principles](https://www.go-fair.org/fair-principles/)
 * Data report is only 2K  
 
+Melosol 
+What is this corpus useful for?
+	Notion of looking at melodies that are tonal for enculturated
+	Could continue for expectation ala IDYOM
+	Vocal affordances
+	Also look difficulty 
+What is in it?
+How to access it?
+Use it quickly to see if you can use it for your own research 
+
+## Questions Answered?
+
+* [ ] What is this corpus useful for?
+* [ ] What is in the corpus?
+* [ ] How to access it?
+* [ ] What types of research questions will this help me answer?
+
 ## Possible Outline 
 
 1. New Corpus (250 Words) 
