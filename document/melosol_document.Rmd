@@ -18,7 +18,7 @@ authornote: |
 
 
 abstract: |
-  This paper introduces the _MeloSol_ corpus, 783 monophonic melodies that represent Western, tonal music. We first begin by describing the overall contents of the corpus, then examine at a mirco level. In order to contextualizs MeloSol, we show descriptive stats comparing it to the Essen and Densmore.We suggest that it might be able to help research that investigates western tonality, difficulty in perceptual experiements, or possibly musical generation in the style as subset of Western tonal.
+  This paper introduces the _MeloSol_ corpus, a collection of 783 Western, tonal monophonic melodies. We first begin by describing the overal structure of the corpus, then proceede to detail its contents as they would be helpful for researchers working in the field of computational musicology or music psychology. In order to contextualizs the MeloSol corpus, compare descriptive statistics generated using the FANTASTIC feature extraction toolkit with that of the Essen Folk Song Collection as well as The Densmore Collection of Native American Songs. We suggest posible uses of this corpus including extending research which investigates Western tonality, perceptual experiments neededing novel ecological stimuli, or work involving the musical generation of monophonic melodies in the style of Western tonal.
 
   
 keywords          : "corpus studies, FAIR data, kern"
@@ -51,9 +51,13 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 # Introdution 
 
-This data report introduces the _MeloSol_ corpus, a collection of 783 monophonic melodies taken from A NEW APPROACH TO SIGHT SINGING FIFTH EDITION. CITE.
-The title _MeloSol_ derrives from a combination of the corpus' content-- _Mel_ odic data-- and the first name of the original author of the collection, _Sol_ Berkowitz.
+This data report introduces the _MeloSol_ corpus, a collection of 783 monophonic melodies taken from _A New Approach to Sight Singing: Fifth Edition_ [@berkowitzNewApproachSight2011].
+The title _MeloSol_ derives from a combination of the corpus' content-- _Mel_ odic data-- and the first name of the original author of the collection, _Sol_ Berkowitz.
+
 The corpus is divided into two major sections: a collection of sight singing melodies composed specifically for pedagogical purposes (n = XXX) and examples from the Western Classical Music canon (n = XXX).
+
+* Point of Edit 
+
 Within each of the two larger sections exists FIVE further subdivisions.
 These five subdivisions tend to be mapped in conjunction with aural skills classroom.
 For example, the first section of both the sight singing melodies and the first section of the Literature align with melodies that a first semester undergraduate student would be expected to learn in their first semester of college in an aural skills classroom. 

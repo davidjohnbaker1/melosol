@@ -17,6 +17,10 @@ This will include the following:
 * [X] Add git ignores
 * [X] Set up RProject
 * [X] Start papaja
+* [ ] Import bib files 
+* [ ] Clean First 500 words 
+* [ ] Import Figure Makers from `mmd`
+* [ ] Write Scripts for Initial Descriptives
 * [ ] Import Fantastic Meta-data
 * [ ] Document Fantastic Version 
  
