@@ -52,72 +52,56 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 # Introdution 
 
 This data report introduces the _MeloSol_ corpus, a collection of 783 monophonic melodies taken from _A New Approach to Sight Singing: Fifth Edition_ [@berkowitzNewApproachSight2011].
-The title _MeloSol_ derives from a combination of the corpus' content-- _Mel_ odic data-- and the first name of the original author of the collection, _Sol_ Berkowitz.
+The title _MeloSol_ derives from a combination of the corpus' content-- _Melo_ dic data-- and the first name of the original author of the collection, _Sol_ Berkowitz.
 
-The corpus is divided into two major sections: a collection of sight singing melodies composed specifically for pedagogical purposes (n = XXX) and examples from the Western Classical Music canon (n = XXX).
+The corpus is divided into two major sections: a collection of sight singing melodies composed specifically for pedagogical purposes (n = 629) taken from Chapter One and examples from Western Classical literature (n = 154) taken from Chapter Five.
+The original text also contains materials for practicing rhythm (Chapter Two), Singing Duets (Chapter Three), Sing and Plays that incoproate a melody and piano accompaniament (Chapter Four), and Supplementary Exercises that are not included here.
+Within each of the larger sections exists five further subdivisions.
+These five subdivisions are mapped in conjunction with the trajectory of many aural skills classrooms.
 
-* Point of Edit 
+For example, the first section of both the sight singing melodies and the first section of literature align with melodies  a first semester undergraduate student in a music degree program might be expected to learn during their first semester of university in an aural skills classroom. 
+As the original book was designed as a pedaogical text, each section of the book and consequently each melody within each section is meant to increase in complexity as new topics are being introduced.
+The fifth and final section of both the sight singing melodies and examples from the literature contains melodies which break from Western tonal practice.
+These melodies contain either modal, atonal, or tonally ambigious melodies. 
+A visual depitction of the breakdown of melodies from the two larger sections in terms of count data is presented in FIGURE ONE. 
 
-Within each of the two larger sections exists FIVE further subdivisions.
-These five subdivisions tend to be mapped in conjunction with aural skills classroom.
-For example, the first section of both the sight singing melodies and the first section of the Literature align with melodies that a first semester undergraduate student would be expected to learn in their first semester of college in an aural skills classroom. 
-Each section is meant to increase in difficulty.
-The fifth and final section of both the sight singing melodies and examples from the literature contains melodies either meant to be atonal or have some sort of unstable tonality (bi-tonality/modality).
-A visual depitction of the breakdown of melodies from the two larger sections in terms of count data is presented IN FIGURE HERE.
+* FIGURE ONE HERE
 
-* FIGURE HERE
+In terms of analyzable data, the 783 melodies are encoded in `**kern` format [@huronHumdrumToolkitReference1994], with each individual file containing metadata listing the unique identifier, chapter from which the melody originates, section within that chapter of the larger text, page number, as well as what mode the encoder labeled the melody as.
+Modes were only noted for a small subset of the corpus, the vast majority of these melodies are either major (ionian) or minor (aeolean).
+Other corpora should be consulted for questions pertaining to mode such as work by Albrecht and Huron [@albrecht2014statistical].
 
-In terms of analyzable data, the 783 melodies are all encoded in `kern` format with each file containing metadata listing the excerpt's LIST HERE.
-Overall, the corpus consists of XXXXX digital tokens, a subset of which are XXX note heads.
-All melodies in the corpus were encoded by hand by the author using MUSE SCORE 3, initially saved as XML, then converted to kern using the HUMDRUM EXTRAS `xml2hum` with the current meta data added using the `name-of-script.R` file.
-Further addition to the metadata can be added with modifications to `name-of-scrpit.R`.
+Overall, the corpus consists of 49,730 tokens, a subset of which are 36,641 note heads.
+All melodies in the corpus were encoded by hand using the software MuseScore [@wernerMuseScore2019], initially saved as XML, then converted to ``**kern`` using the humdrum extras `xml2hum` tool [@sappHumdrumExtras2008] with the current meta data added using the `name-of-script.R`.
+Further addition to the metadata can be added with modifications to `name-of-script` found in the `scripts` directory.
+We describe the corpus from a macro perspective in figure TWO and THREE.
+Figure TWO presents the combined tonal materials, sections one through four of Chapter One and Five; figure THREE presents the same information for section five of Chapter One and Five.
+Tonal and non-tonal materials were separated as not to distort key representations since non-tonal melodies are encoded with a no sharps, no flats key signature. 
 
-From a more meaningful point of view, the descriptive statistics of the corpus are displayed in FIGURE TWO and FIGURE THREE.
-
-
-* FIGURE TWO (subset out Section Five )
-* FIGURE THREE (Section Five )
-
+* FIGURE TWO (Subset out Section Five)
+* FIGURE THREE (Section Five)
 
 # Comparison 
 
-Further descriptive statistics of the corpus generated from MULLENSIEFEN'S FANTASTIC TOOLBOX can help contextualize the _MELOSOL_ corpus in context with other corpora commonly used in the literature. 
-One of the most cited corpora in the field of computational musicology is ESSEN.
-ESSEN contains XYZ and is often taken as proxy for representing implicit understanding via statistical learning (HURON) and PEARCE and OTHERS.
-Essen also has Chinese songs. 
-The _MeloSol_ corpus also falls under umbrella of Western Music and as discussed below, may be helpful novel corpus for continuing to investigate claims. 
-Since publication of ESSEN there has also been DENSMORE CITE.
-DENSMORE is collection of melodies encoded by Shanahan and Shanahan.
-From musicological point of view, both DENSMORE and CHINESE are expected to be different for reasons of both location as well as style.
-Here we compare the two to get high level reduction of idea. 
+In order to further contextualize the _MeloSol_ corpus with the context of other corpora found in the literature, we briefly compare descriptive statistics from the _MeloSol_ corpus with both _The Densmore Collection of Native American Songs_ [@neubarthSupervisedDescriptivePattern2018; @shanahanDensmoreCollectionNative2014] as well as the European and Chinese subset of the _Essen Folk Song Collection_ [@schaffrathEssenFolkSong1995].
+We chose both the _Densmore_ as well as the _Essen_ collection as both corpora represent corpora of melodies that have been used to study singing as well as investigations into computationally modeling the implicit understanding of patterns found in different musical cultures.
+Further, we compare the _MeloSol_ with the _Essen_ collection as the _Essen_ collection has been used as a proxy for representing the implicit understanding of the structure of Western, tonal music in computational models that depend theoretically on the concept of implicit, statistical learning [@demorest201612; @huronSweetAnticipation2006; @pearceStatisticalLearningProbabilistic2018a].
+Comparisons of descriptive statistics were conducted using the FANTASTIC toolbox [@mullensiefenFantasticFeatureANalysis2009]. 
+The accompanying calculations for each melody are found in `corpus/melosol_fantastic_features.csv`.
 
-First in FIGURE FOUR we compare high level descriptive statistics between WESTERN ESSEN, CHINA, DENSMORE, and MELOSOL.
-Figure contains comparative overlap of LIST OF FEATURES HERE.
-Note there is a very large difference in the size of MELOSOL (and others) compared to ESSEN.
+In FIGURE FOUR, we compare ...
+In FIGURE FIVE, we compare ...
+
 
 * FIGURE FOUR 
-
-Second in FIGURE FIVE we compoare MORE ABSTRACT FEAGURES
-
 * FIGURE FIVE
-
-Here is some small comparison on the differences in features. 
 
 # Useful 
 
-As the _MeloSol_ corpus is made of Western music, can be used to continue research that has made claims about certain features of Western music if need proxy.
-For example there are a lot of claims made by HURON about contour class that have been initiall explored by BAKER.
-There also have been lots of modeling of expeectation using IDyOM by Pearce that have used ESSEN.
-If buy the idea of sample population as generation, this could be taken forward in that area.
-
-Also note that now have dataset was initially generated using pedagogical materials and might be helfpul in that domain.
-For example, extending work of MY DISSERATATION could look at proxies of difficulty using FANTASTIC.
-Could also see if enough data here can be used for generative data analyses using LSTM.
-
-
-
-## Data analysis
-We used `r cite_r("r-references.bib")` for all our analyses.
+As the _MeloSol_ corpus comprises Western, tonal music, this corpora might be utalized in order to continue research investigating empirical claims about about patterns intrinsic to Western, tonal music.
+For example claims made by Huron CITE regarding contour class-- initially explored using this dataset by BAKER-- could be further modeled using _MeloSol_.
+Additionally, as _MeloSol_ strictly contains music associated with Western, tonal music, the corpus could be used in further work replacing the _Essen_ collection as a dataset in which to train computational models of melodic expectation [@pearceStatisticalLearningProbabilistic2018a].
+We finally note that as this corpus was initially developed in order to investigate how to make pedagogical improvements in aural skills classrooms, using _MeloSol_ for this purpose would be a logical extension to this programme of research CITE ME. 
 
 
 \newpage
