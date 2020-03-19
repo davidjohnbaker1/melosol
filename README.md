@@ -11,12 +11,15 @@ In this repository, you will find the following
 
 ## To Do 
 
-* [ ] Write Scripts for Initial Descriptives
-* [ ] Add in Info for installing humdrum 
-* [ ] Add in R Script for Metadata 
+* [ ] Write humdrum scripts for initial descriptives
+* [ ] Add documentation for installing humdrum 
 * [ ] Update Numbering System for three digit ordering
-* [ ] Import Figure Makers from `mmd`
 * [ ] Find Missing Melosol FANTASTIC melody and add it in! 
+* [ ] Convert Path Names for `melosol project`
+* [ ] Insert Images to Document 
+* [ ] Move all scripts to scripts (not corpus) 
+* [X] Add in R Script for Metadata 
+* [X] Import Figure Makers from `mmd`
 * [X] Import MeloSol 
 * [X] Import Essen Fantastic 
 * [X] Import Melosol metadata 
