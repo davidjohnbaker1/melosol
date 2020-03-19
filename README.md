@@ -30,7 +30,7 @@ In this repository, you will find the following
 * [FAIR Principles](https://www.go-fair.org/fair-principles/)
 * Data report is only 2K  
 
-## Questions Answered?
+## Questions Answered
 
 * [X] What is this corpus useful for?
 * [X] What is in the corpus?
