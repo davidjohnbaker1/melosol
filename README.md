@@ -11,19 +11,21 @@ In this repository, you will find the following
 
 ## To Do 
 
+* [ ] Write Scripts for Initial Descriptives
+* [ ] Add in Info for installing humdrum 
+* [ ] Add in R Script for Metadata 
+* [ ] Update Numbering System for three digit ordering
+* [ ] Import Figure Makers from `mmd`
+* [ ] Find Missing Melosol FANTASTIC melody and add it in! 
 * [X] Import MeloSol 
-* [ ] Import Essen Fantastic 
-* [ ] Import Densmore Fantastic 
+* [X] Import Essen Fantastic 
+* [X] Import Melosol metadata 
+* [X] Import Densmore Fantastic 
 * [X] Add git ignores
 * [X] Set up RProject
 * [X] Start papaja
 * [X] Import bib files 
-* [ ] Add in R Script for Metadata 
-* [ ] Update Numbering System for three digit ordering
 * [X] Clean First 500 words 
-* [ ] Import Figure Makers from `mmd`
-* [ ] Write Scripts for Initial Descriptives
-* [ ] Import Fantastic Meta-data as `corpus/melosol_fantastic_features.csv`
  
 ## Discussion Points
 
