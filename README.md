@@ -4,20 +4,22 @@ This repository contains all of the informaiton for documenting the `MeloSol` co
 In this repository, you will find the following 
 
 * The _MeloSol_ corpus in `**kern` format
-* The _MeloSol_ corpus in `XML` format
 * Text of the pre-print documenting this corpus in `document/melosol_documentation.pdf`
-* A copy of the original dissertation chapter from Baker, 2019 introducing corpus in `literature/hello-corpus.pdf`
 * Scripts used to generate all analyses and figures in `scripts` 
 
 ## To Do 
 
+* [ ] Convert Path Names for `melosol project`
 * [ ] Write humdrum scripts for initial descriptives
-* [ ] Add documentation for installing humdrum 
 * [ ] Update Numbering System for three digit ordering
 * [ ] Find Missing Melosol FANTASTIC melody and add it in! 
-* [ ] Convert Path Names for `melosol project`
 * [ ] Insert Images to Document 
 * [ ] Move all scripts to scripts (not corpus) 
+
+## Done 
+
+* [X] Add Encoder table
+* [X] Acknowledge other encoders in text 
 * [X] Add in R Script for Metadata 
 * [X] Import Figure Makers from `mmd`
 * [X] Import MeloSol 
@@ -35,10 +37,4 @@ In this repository, you will find the following
 * [FAIR Principles](https://www.go-fair.org/fair-principles/)
 * Data report is only 2K  
 
-## Questions Answered
-
-* [X] What is this corpus useful for?
-* [X] What is in the corpus?
-* [X] How to access it?
-* [X] What types of research questions will this help me answer?
 

@@ -103,6 +103,10 @@ For example claims made by Huron CITE regarding contour class-- initially explor
 Additionally, as _MeloSol_ strictly contains music associated with Western, tonal music, the corpus could be used in further work replacing the _Essen_ collection as a dataset in which to train computational models of melodic expectation [@pearceStatisticalLearningProbabilistic2018a].
 We finally note that as this corpus was initially developed in order to investigate how to make pedagogical improvements in aural skills classrooms, using _MeloSol_ for this purpose would be a logical extension to this programme of research CITE ME. 
 
+# Acknowledgements
+
+Ir would like to thank Adam Rosada, Elizabeth Monzingo, and Connor Davis in their help encoding some of the melodies for this corpus.
+Additionally, I would like to thank Daniel Shanahan and Craig Sapp for technical support while working with and always learning new things about humdrum.
 
 \newpage
 
