@@ -10,20 +10,25 @@ library(viridis)
 
 #--------------------------------------------------
 # Import Feature Data
-melosol_features <- read_csv("corpus/symbolic/Melosol_Features.csv")
-densmore_features <- read_csv("corpus/symbolic/Densmore_Features.csv")
-essen_features <- read_csv("corpus/symbolic/feature_data/essenFeatures.csv")
+melosol_features <- read_csv("corpus/fantastic/melosol_features.csv")
+densmore_features <- read_csv("corpus/fantastic/densmore_features.csv")
+essen_features <- read_csv("corpus/fantastic/esssen_features.csv")
 #--------------------------------------------------
+
+
+
 # Import Dist Data
-melosol_krum <- read_csv("corpus/symbolic/krn/melosol_deg.csv")
-euro_krum <- read_csv("corpus/symbolic/krn/essen/euro_degs.csv")
-asia_krum <- read_csv("corpus/symbolic/krn/essen/asia_deg.csv")
+# !! Maybe Delete!!
+# melosol_krum <- read_csv("corpus/symbolic/krn/melosol_deg.csv")
+# euro_krum <- read_csv("corpus/symbolic/krn/essen/euro_degs.csv")
+# asia_krum <- read_csv("corpus/symbolic/krn/essen/asia_deg.csv")
 
-melosol_krum$dataset <- "MeloSol"
-euro_krum$dataset <- "Euro"
-asia_krum$dataset <- "Asia"
-
-krum_data <- rbind(melosol_krum, euro_krum, asia_krum)
+# 
+# melosol_krum$dataset <- "MeloSol"
+# euro_krum$dataset <- "Euro"
+# asia_krum$dataset <- "Asia"
+# 
+# krum_data <- rbind(melosol_krum, euro_krum, asia_krum)
 
 melosol_features$Country <- "Western"
 densmore_features$Country <- "North America"
@@ -143,7 +148,8 @@ plot_grid(corpora_range_comparison,
 
 comparative_descriptive_panel
 
-# ggsave(filename = "document/img/comparative_descritive_panel.png", plot = comparative_descriptive_panel)
+# ggsave(filename = "img/comparative_descritive_panel.png", plot = comparative_descriptive_panel)
+# Saving 11.6 x 8 in image
 
 # Make Huron Panel Grid 
 
@@ -211,7 +217,9 @@ plot_grid(ncol =  2, corpora_ientropy_comparision, corpora_dentropy_comparision,
           corpora_tonalspike_comparision,
           corpora_scgv_comparision) -> corpora_emergent 
 
-# ggsave(filename = "document/img/corpora_emergent.png", corpora_emergent)
+corpora_emergent
+#ggsave(filename = "img/corpora_emergent.png", corpora_emergent)
+# Saving 13.6 x 8 in image
 
 #--------------------------------------------------
 # Redo Huron 
@@ -234,56 +242,11 @@ melody_features %>%
 
 corpora_contour_distribution
 
-# ggsave(filename = "document/img/huron_recreation.png", corpora_contour_distribution)
-#--------------------------------------------------
-# Tone Plots 
-cat(unique(krum_data$scaledegree),sep = ",")
-krum_data
-
-krum_data %>%
-  filter(deg != "3 6") %>%
-  ggplot(aes(x = deg, y = percent, fill = dataset)) +
-  geom_bar(stat = 'identity', position = 'dodge', aes(fill = dataset)) + 
-  theme_minimal() +
-  scale_fill_viridis(discrete = TRUE) +
-  labs(title = "Chromatic Aggregate", x = "Scale Degree", y = "Percent") -> krum_plot_all
-
-krum_plot_all
-
-krum_data %>%
-  filter(deg != "3 6") %>%
-  filter(deg != "1-") %>%
-  filter(deg != "2-") %>%
-  filter(deg != "3-") %>%
-  filter(deg != "4-") %>%
-  filter(deg != "5-") %>%
-  filter(deg != "6-") %>%
-  filter(deg != "7-") %>%
-  filter(deg != "1+") %>%
-  filter(deg != "2+") %>%
-  filter(deg != "3+") %>%
-  filter(deg != "4+") %>%
-  filter(deg != "5+") %>%
-  filter(deg != "6+") %>%
-  filter(deg != "7+") %>%
-  ggplot(aes(x = deg, y = percent, fill = dataset)) +
-  geom_bar(stat = 'identity', position = 'dodge', aes(fill = dataset)) + 
-  theme_minimal() +
-  scale_fill_viridis(discrete = TRUE) +
-  labs(title = "Diatonic Set", x = "Scale Degree", y = "Percent") -> krum_plot_sub
-
-krum_plot_sub
-
-#ggsave("document/img/krum-plot-all.png", krum_plot_all)
-
-plot_grid(krum_plot_sub, krum_plot_all, nrow = 2) -> krum_panel
-
-#ggsave("document/img/krum_panel.png", krum_panel)
-
+# ggsave(filename = "img/huron_recreation.png", corpora_contour_distribution)
+# Saving 13.6 x 8 in image
 #--------------------------------------------------
 # Plots this Scritp Makes
 
 comparative_descriptive_panel
 corpora_emergent
 corpora_contour_distribution
-krum_panel

@@ -9,16 +9,16 @@ In this repository, you will find the following
 
 ## To Do 
 
-* [ ] Convert Path Names for `melosol project`
-* [ ] Write humdrum scripts for initial descriptives
+* [ ] Clean text to align with figures 
 * [ ] Update Numbering System for three digit ordering
 * [ ] Find Missing Melosol FANTASTIC melody and add it in! 
-* [ ] Insert Images to Document 
-* [ ] Move all scripts to scripts (not corpus) 
 
 ## Done 
 
 * [X] Add Encoder table
+* [X] Move all scripts to scripts (not corpus) 
+* [X] Insert Images to Document 
+* [X] Convert Path Names for `melosol project`
 * [X] Acknowledge other encoders in text 
 * [X] Add in R Script for Metadata 
 * [X] Import Figure Makers from `mmd`

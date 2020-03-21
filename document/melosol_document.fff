@@ -1,0 +1,28 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{../img/descriptive_panel.png}
+\caption{Descriptive Statistics of MeloSol}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{../img/comparative_descriptive_panel.png}
+\caption{Descriptive Statistics of MeloSol}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{../img/corpora_emergent.png}
+\caption{FANTASTIC Density Plots}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{../img/huron_recreation.png}
+\caption{Huron Countour Class}
+\end{figure*}

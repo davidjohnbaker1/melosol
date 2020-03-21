@@ -2,12 +2,11 @@
 # Metadata for Berkowitz Script 
 #--------------------------------------------------
 # Import Meta Data In Global Environment
-meta <- read.csv("berk_melo_meta.csv",
+meta <- read.csv("melosol_metatdata.csv",
                   check.names = FALSE,
                   sep = ",")
 
 #--------------------------------------------------
-# Whoops, forgot .krn 
 
 meta$Filename <- paste0(meta$Filename, ".krn")
 

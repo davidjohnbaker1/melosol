@@ -74,12 +74,11 @@ Other corpora should be consulted for questions pertaining to mode such as work 
 Overall, the corpus consists of 49,730 tokens, a subset of which are 36,641 note heads.
 All melodies in the corpus were encoded by hand using the software MuseScore [@wernerMuseScore2019], initially saved as XML, then converted to ``**kern`` using the humdrum extras `xml2hum` tool [@sappHumdrumExtras2008] with the current meta data added using the `name-of-script.R`.
 Further addition to the metadata can be added with modifications to `name-of-script` found in the `scripts` directory.
-We describe the corpus from a macro perspective in figure TWO and THREE.
-Figure TWO presents the combined tonal materials, sections one through four of Chapter One and Five; figure THREE presents the same information for section five of Chapter One and Five.
+We describe the corpus from a macro perspective in figure two.
+Figure two presents the combined tonal materials, sections one through four of Chapter One and Five; figure THREE presents the same information for section five of Chapter One and Five.
 Tonal and non-tonal materials were separated as not to distort key representations since non-tonal melodies are encoded with a no sharps, no flats key signature. 
 
-* FIGURE TWO (Subset out Section Five)
-* FIGURE THREE (Section Five)
+![Descriptive Statistics of MeloSol](../img/descriptive_panel.png)
 
 # Comparison 
 
@@ -89,9 +88,16 @@ Further, we compare the _MeloSol_ with the _Essen_ collection as the _Essen_ col
 Comparisons of descriptive statistics were conducted using the FANTASTIC toolbox [@mullensiefenFantasticFeatureANalysis2009]. 
 The accompanying calculations for each melody are found in `corpus/melosol_fantastic_features.csv`.
 
+
+
 In FIGURE FOUR, we compare ...
 In FIGURE FIVE, we compare ...
 
+![Descriptive Statistics of MeloSol](../img/comparative_descriptive_panel.png)
+
+![FANTASTIC Density Plots](../img/corpora_emergent.png)
+
+![Huron Countour Class](../img/huron_recreation.png)
 
 * FIGURE FOUR 
 * FIGURE FIVE

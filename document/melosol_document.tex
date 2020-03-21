@@ -159,17 +159,15 @@ Other corpora should be consulted for questions pertaining to mode such as work 
 Overall, the corpus consists of 49,730 tokens, a subset of which are 36,641 note heads.
 All melodies in the corpus were encoded by hand using the software MuseScore (Werner, Nicholas, \& Bonte, 2019), initially saved as XML, then converted to \texttt{**kern} using the humdrum extras \texttt{xml2hum} tool (Sapp, 2008) with the current meta data added using the \texttt{name-of-script.R}.
 Further addition to the metadata can be added with modifications to \texttt{name-of-script} found in the \texttt{scripts} directory.
-We describe the corpus from a macro perspective in figure TWO and THREE.
-Figure TWO presents the combined tonal materials, sections one through four of Chapter One and Five; figure THREE presents the same information for section five of Chapter One and Five.
+We describe the corpus from a macro perspective in figure two.
+Figure two presents the combined tonal materials, sections one through four of Chapter One and Five; figure THREE presents the same information for section five of Chapter One and Five.
 Tonal and non-tonal materials were separated as not to distort key representations since non-tonal melodies are encoded with a no sharps, no flats key signature.
 
-\begin{itemize}
-\tightlist
-\item
-  FIGURE TWO (Subset out Section Five)
-\item
-  FIGURE THREE (Section Five)
-\end{itemize}
+\begin{figure}
+\centering
+\includegraphics{../img/descriptive_panel.png}
+\caption{Descriptive Statistics of MeloSol}
+\end{figure}
 
 \hypertarget{comparison}{%
 \section{Comparison}\label{comparison}}
@@ -182,6 +180,24 @@ The accompanying calculations for each melody are found in \texttt{corpus/meloso
 
 In FIGURE FOUR, we compare \ldots{}
 In FIGURE FIVE, we compare \ldots{}
+
+\begin{figure}
+\centering
+\includegraphics{../img/comparative_descriptive_panel.png}
+\caption{Descriptive Statistics of MeloSol}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{../img/corpora_emergent.png}
+\caption{FANTASTIC Density Plots}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{../img/huron_recreation.png}
+\caption{Huron Countour Class}
+\end{figure}
 
 \begin{itemize}
 \tightlist
@@ -199,10 +215,11 @@ For example claims made by Huron CITE regarding contour class-- initially explor
 Additionally, as \emph{MeloSol} strictly contains music associated with Western, tonal music, the corpus could be used in further work replacing the \emph{Essen} collection as a dataset in which to train computational models of melodic expectation (Pearce, 2018).
 We finally note that as this corpus was initially developed in order to investigate how to make pedagogical improvements in aural skills classrooms, using \emph{MeloSol} for this purpose would be a logical extension to this programme of research CITE ME.
 
-\hypertarget{data-analysis}{%
-\subsection{Data analysis}\label{data-analysis}}
+\hypertarget{acknowledgements}{%
+\section{Acknowledgements}\label{acknowledgements}}
 
-We used R (Version 3.6.2; R Core Team, 2019) and the R-package \emph{papaja} (Version 0.1.0.9942; Aust \& Barth, 2020) for all our analyses.
+Ir would like to thank Adam Rosada, Elizabeth Monzingo, and Connor Davis in their help encoding some of the melodies for this corpus.
+Additionally, I would like to thank Daniel Shanahan and Craig Sapp for technical support while working with and always learning new things about humdrum.
 
 \newpage
 
@@ -216,9 +233,6 @@ We used R (Version 3.6.2; R Core Team, 2019) and the R-package \emph{papaja} (Ve
 \hypertarget{refs}{}
 \leavevmode\hypertarget{ref-albrecht2014statistical}{}%
 Albrecht, J. D., \& Huron, D. (2014). A statistical approach to tracing the historical development of major and minor pitch distributions, 1400-1750. \emph{Music Perception: An Interdisciplinary Journal}, \emph{31}(3), 223--243.
-
-\leavevmode\hypertarget{ref-R-papaja}{}%
-Aust, F., \& Barth, M. (2020). \emph{papaja: Create APA manuscripts with R Markdown}. Retrieved from \url{https://github.com/crsh/papaja}
 
 \leavevmode\hypertarget{ref-berkowitzNewApproachSight2011}{}%
 Berkowitz, S., Fontrier, G., Kraft, L., Goldstein, P., \& Smaldone, E. (2011). \emph{A new approach to sight singing} (5th ed). New York: W.W. Norton.
@@ -240,9 +254,6 @@ Neubarth, K., Shanahan, D., \& Conklin, D. (2018). Supervised descriptive patter
 
 \leavevmode\hypertarget{ref-pearceStatisticalLearningProbabilistic2018a}{}%
 Pearce, M. T. (2018). Statistical learning and probabilistic prediction in music cognition: Mechanisms of stylistic enculturation: Enculturation: Statistical learning and prediction. \emph{Annals of the New York Academy of Sciences}, \emph{1423}(1), 378--395. \url{https://doi.org/10.1111/nyas.13654}
-
-\leavevmode\hypertarget{ref-R-base}{}%
-R Core Team. (2019). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}
 
 \leavevmode\hypertarget{ref-sappHumdrumExtras2008}{}%
 Sapp, C. (2008). Humdrum Extras.

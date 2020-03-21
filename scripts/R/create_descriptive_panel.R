@@ -1,17 +1,20 @@
-#--------------------------------------------------
-# Corpus Analysis
-#--------------------------------------------------
-# NOTE THIS SCRIPT DOES NOT WORK YET AND
-# NEEDS TO BE MODIFIED FOR DATA REPORT PAPER 
-#--------------------------------------------------
+#---------------------------------------------------
+# Create Descriptive Statistic Plots 
+#---------------------------------------------------
 library(tidyverse)
 library(cowplot)
 library(viridis)
+#----------------------------------------------------
+meta <- read_csv("corpus/metadata/original_metadata.csv") 
+fantastic_computations <- read_csv("corpus/fantastic/melosol_features.csv")
 
-meta <- read_csv("corpus/symbolic/krn/melosol/berk_melo_meta.csv") 
-fantastic_computations <- read_csv("corpus/symbolic/Melosol_Features.csv")
-#--------------------------------------------------
-# Make Major Minor
+melosol_metadata
+
+fantastic_computations
+
+#---------------------------------------------------
+# Add on Major and Minor to Metadata 
+
 meta <- meta %>%
   mutate(major_minor = ifelse(str_detect(meta$Key, pattern = "[A-G]"), "MAJOR","MINOR"))
 
@@ -21,26 +24,33 @@ fantastic_computations <- fantastic_computations %>%
 melosol_features <- meta %>%
   left_join(fantastic_computations)
 
+
 #--------------------------------------------------
 # Key Distribution Plot
+
+# !!! Split Major and Minor 
+# !!! Reorder by Circle of Fifths 
+
 melosol_features %>%
+  filter(`!!!Section` != "V") %>%
   ggplot(aes(x = Key)) +
-  geom_bar(aes(fill = `!!! Section`)) +
+  geom_bar(aes(fill = `!!!Section`)) +
   theme_minimal() +
-  theme(axis.text=element_text(size=6)) +
-  guides(fill=FALSE) +
+  theme(axis.text=element_text(size=10)) +
   labs(title = "Key Distribution", 
        x = "Key",
        y = "", fill = "Section") +
-  scale_fill_viridis(discrete = TRUE) +
-  facet_wrap(~major_minor) -> melosol_key_distribution 
+  coord_flip() +
+  scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
+  facet_wrap(~major_minor) +
+  scale_fill_viridis(discrete = TRUE, begin = 0, end = .8)   -> melosol_key_distribution 
 
 melosol_key_distribution
 #--------------------------------------------------
 # Length Plot
 melosol_features %>%
   ggplot(aes(x = len)) +
-  geom_bar(aes(fill = `!!! Section`)) +
+  geom_bar(aes(fill = `!!!Section`)) +
   theme(legend.position = "none") +
   theme_minimal() +
   guides(fill=FALSE) +
@@ -56,7 +66,7 @@ melosol_len_distribution
 
 melosol_features %>%
   ggplot(aes(x = p.range)) +
-  geom_bar(aes(fill = `!!! Section`)) +
+  geom_bar(aes(fill = `!!!Section`)) +
   theme_minimal() +
   guides(fill=FALSE) +
   scale_fill_viridis(discrete = TRUE) +
@@ -71,7 +81,7 @@ melosol_range_distribution
 melosol_features %>%
   filter(h.contour != "NA") %>%
   ggplot(aes(x = h.contour)) +
-  geom_bar(aes(fill = `!!! Section`)) +
+  geom_bar(aes(fill = `!!!Section`)) +
   theme_minimal() +
   labs(title = "Huron Contour Class", 
        x = "Contour Class",
@@ -86,5 +96,9 @@ melosol_contour_distribution
 plot_grid(melosol_key_distribution, melosol_len_distribution, 
           melosol_range_distribution, melosol_contour_distribution) -> melosol_descript_panel
 
-# ggsave(filename = "document/img/melosol_descript_panel.png", melosol_descript_panel)
+melosol_descript_panel
+# ggsave(filename = "img/descriptive_panel.png", melosol_descript_panel)
+# Saving 12.4 x 8 in image
 #--------------------------------------------------
+
+
