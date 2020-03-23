@@ -1,7 +1,7 @@
 \PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
 \PassOptionsToPackage{hyphens}{url}
 %
-\documentclass[english,man]{apa6}
+\documentclass[english,man,floatsintext]{apa6}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
@@ -30,7 +30,7 @@
 \usepackage{hyperref}
 \hypersetup{
             pdftitle={The MeloSol Corpus},
-            pdfkeywords={corpus studies, FAIR data, kern},
+            pdfkeywords={melodic corpus, Tonal music, kern, sight singing},
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
@@ -95,17 +95,11 @@
 \affiliation{
 \vspace{0.5cm}
 \textsuperscript{1} Louisiana State University}
-\authornote{David John Baker now works at Flatiron School in London, England.
+\authornote{David John Baker now works at Flatiron School in London, England
 
 
 Correspondence concerning this article should be addressed to David John Baker, . E-mail: davidjohnbaker1@gmail.com}
-\keywords{corpus studies, FAIR data, kern\newline\indent Word count: X}
-\DeclareDelayedFloatFlavor{ThreePartTable}{table}
-\DeclareDelayedFloatFlavor{lltable}{table}
-\DeclareDelayedFloatFlavor*{longtable}{table}
-\makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
-\makeatother
+\keywords{melodic corpus, Tonal music, kern, sight singing\newline\indent Word count: ~900}
 \usepackage{lineno}
 
 \linenumbers
@@ -123,7 +117,7 @@ Correspondence concerning this article should be addressed to David John Baker, 
 \date{}
 
 \abstract{
-This paper introduces the \emph{MeloSol} corpus, a collection of 783 Western, tonal monophonic melodies. We first begin by describing the overal structure of the corpus, then proceede to detail its contents as they would be helpful for researchers working in the field of computational musicology or music psychology. In order to contextualizs the MeloSol corpus, compare descriptive statistics generated using the FANTASTIC feature extraction toolkit with that of the Essen Folk Song Collection as well as The Densmore Collection of Native American Songs. We suggest posible uses of this corpus including extending research which investigates Western tonality, perceptual experiments neededing novel ecological stimuli, or work involving the musical generation of monophonic melodies in the style of Western tonal.
+This paper introduces the \emph{MeloSol} corpus, a collection of 783 Western, tonal monophonic melodies. We first begin by describing the overal structure of the corpus, then proceede to detail its contents as they would be helpful for researchers working in the field of computational musicology or music psychology. In order to contextualizs the MeloSol corpus in relation to other corpora in the literature, we present descriptive statistics of the \emph{MeloSol} corpus alongside the \emph{The Densmore Collection of Native American Song} and \emph{The Essen Folk Song Collection}. We suggest posible futures uses of this corpus including extending research investigating Western tonality, perceptual experiments neededing novel ecological stimuli, or work involving the musical generation of monophonic melodies in the style of Western tonal music.
 }
 
 \begin{document}
@@ -141,27 +135,19 @@ Within each of the larger sections exists five further subdivisions.
 These five subdivisions are mapped in conjunction with the trajectory of many aural skills classrooms.
 
 For example, the first section of both the sight singing melodies and the first section of literature align with melodies a first semester undergraduate student in a music degree program might be expected to learn during their first semester of university in an aural skills classroom.
-As the original book was designed as a pedaogical text, each section of the book and consequently each melody within each section is meant to increase in complexity as new topics are being introduced.
+As the original book was designed as a pedaogical text, each section of the book and consequently each melody within each section is meant to increase in complexity as new topics are introduced.
 The fifth and final section of both the sight singing melodies and examples from the literature contains melodies which break from Western tonal practice.
 These melodies contain either modal, atonal, or tonally ambigious melodies.
 A visual depitction of the breakdown of melodies from the two larger sections in terms of count data is presented in FIGURE ONE.
-
-\begin{itemize}
-\tightlist
-\item
-  FIGURE ONE HERE
-\end{itemize}
-
 In terms of analyzable data, the 783 melodies are encoded in \texttt{**kern} format (Huron, 1994), with each individual file containing metadata listing the unique identifier, chapter from which the melody originates, section within that chapter of the larger text, page number, as well as what mode the encoder labeled the melody as.
 Modes were only noted for a small subset of the corpus, the vast majority of these melodies are either major (ionian) or minor (aeolean).
 Other corpora should be consulted for questions pertaining to mode such as work by Albrecht and Huron (Albrecht \& Huron, 2014).
 
-Overall, the corpus consists of 49,730 tokens, a subset of which are 36,641 note heads.
-All melodies in the corpus were encoded by hand using the software MuseScore (Werner, Nicholas, \& Bonte, 2019), initially saved as XML, then converted to \texttt{**kern} using the humdrum extras \texttt{xml2hum} tool (Sapp, 2008) with the current meta data added using the \texttt{name-of-script.R}.
-Further addition to the metadata can be added with modifications to \texttt{name-of-script} found in the \texttt{scripts} directory.
-We describe the corpus from a macro perspective in figure two.
-Figure two presents the combined tonal materials, sections one through four of Chapter One and Five; figure THREE presents the same information for section five of Chapter One and Five.
-Tonal and non-tonal materials were separated as not to distort key representations since non-tonal melodies are encoded with a no sharps, no flats key signature.
+Overall, the corpus consists of 49,730 \texttt{**kern} tokens, a subset of which are 36,641 note heads.
+All melodies in the corpus were encoded by hand using the software MuseScore (Werner, Nicholas, \& Bonte, 2019), initially saved as XML, then converted to \texttt{**kern} using the humdrum extras \texttt{xml2hum} tool (Sapp, 2008) with the current meta data added using the \texttt{metadata\_adder.R}.
+Further addition to the metadata can be added with modifications to \texttt{metadat\_adder.R} found in the \texttt{scripts/R} directory.
+We describe the corpus from a macro perspective in Figure XXXX.
+Section V was removed from the top left portion of Figure XXX as the majority of melodies in the atonal section of the corpus are encoded with a zero flat, zero sharp key signature and that including those in the figure would skew C major and A minor's representitivness.
 
 \begin{figure}
 \centering
@@ -173,13 +159,10 @@ Tonal and non-tonal materials were separated as not to distort key representatio
 \section{Comparison}\label{comparison}}
 
 In order to further contextualize the \emph{MeloSol} corpus with the context of other corpora found in the literature, we briefly compare descriptive statistics from the \emph{MeloSol} corpus with both \emph{The Densmore Collection of Native American Songs} (Neubarth, Shanahan, \& Conklin, 2018; Shanahan \& Shanahan, 2014) as well as the European and Chinese subset of the \emph{Essen Folk Song Collection} (Schaffrath, 1995).
-We chose both the \emph{Densmore} as well as the \emph{Essen} collection as both corpora represent corpora of melodies that have been used to study singing as well as investigations into computationally modeling the implicit understanding of patterns found in different musical cultures.
+We chose both the \emph{Densmore} as well as the \emph{Essen} collection seeing as both corpora contain monophonic melodies.
 Further, we compare the \emph{MeloSol} with the \emph{Essen} collection as the \emph{Essen} collection has been used as a proxy for representing the implicit understanding of the structure of Western, tonal music in computational models that depend theoretically on the concept of implicit, statistical learning (Demorest \& Morrison, 2016; Huron, 2006; Pearce, 2018).
 Comparisons of descriptive statistics were conducted using the FANTASTIC toolbox (Mullensiefen, 2009).
 The accompanying calculations for each melody are found in \texttt{corpus/melosol\_fantastic\_features.csv}.
-
-In FIGURE FOUR, we compare \ldots{}
-In FIGURE FIVE, we compare \ldots{}
 
 \begin{figure}
 \centering
@@ -199,21 +182,13 @@ In FIGURE FIVE, we compare \ldots{}
 \caption{Huron Countour Class}
 \end{figure}
 
-\begin{itemize}
-\tightlist
-\item
-  FIGURE FOUR
-\item
-  FIGURE FIVE
-\end{itemize}
-
 \hypertarget{useful}{%
 \section{Useful}\label{useful}}
 
 As the \emph{MeloSol} corpus comprises Western, tonal music, this corpora might be utalized in order to continue research investigating empirical claims about about patterns intrinsic to Western, tonal music.
-For example claims made by Huron CITE regarding contour class-- initially explored using this dataset by BAKER-- could be further modeled using \emph{MeloSol}.
+For example claims made by Huron (Huron, 1996) regarding contour class-- initially explored using this dataset by (Baker, 2019)-- could be further modeled using \emph{MeloSol}.
 Additionally, as \emph{MeloSol} strictly contains music associated with Western, tonal music, the corpus could be used in further work replacing the \emph{Essen} collection as a dataset in which to train computational models of melodic expectation (Pearce, 2018).
-We finally note that as this corpus was initially developed in order to investigate how to make pedagogical improvements in aural skills classrooms, using \emph{MeloSol} for this purpose would be a logical extension to this programme of research CITE ME.
+We finally note that as this corpus was initially developed in order to investigate how to make pedagogical improvements in aural skills classrooms, using \emph{MeloSol} for this purpose would be a logical extension to this programme of research (Baker, 2019).
 
 \hypertarget{acknowledgements}{%
 \section{Acknowledgements}\label{acknowledgements}}
@@ -234,6 +209,9 @@ Additionally, I would like to thank Daniel Shanahan and Craig Sapp for technical
 \leavevmode\hypertarget{ref-albrecht2014statistical}{}%
 Albrecht, J. D., \& Huron, D. (2014). A statistical approach to tracing the historical development of major and minor pitch distributions, 1400-1750. \emph{Music Perception: An Interdisciplinary Journal}, \emph{31}(3), 223--243.
 
+\leavevmode\hypertarget{ref-phdthesis}{}%
+Baker, D. J. (2019). \emph{Modeling melodic dictation} (PhD thesis). Louisiana State University.
+
 \leavevmode\hypertarget{ref-berkowitzNewApproachSight2011}{}%
 Berkowitz, S., Fontrier, G., Kraft, L., Goldstein, P., \& Smaldone, E. (2011). \emph{A new approach to sight singing} (5th ed). New York: W.W. Norton.
 
@@ -242,6 +220,9 @@ Demorest, S. M., \& Morrison, S. J. (2016). 12 quantifying culture: The cultural
 
 \leavevmode\hypertarget{ref-huronHumdrumToolkitReference1994}{}%
 Huron, D. (1994). The Humdrum Toolkit: Reference Manual. Center for Computer Assisted Research in the Humanities.
+
+\leavevmode\hypertarget{ref-huronMelodicArchWestern1996}{}%
+Huron, D. (1996). The Melodic Arch in Western Folk Songs. \emph{Computing in Musicology}, \emph{10}, 3--23.
 
 \leavevmode\hypertarget{ref-huronSweetAnticipation2006}{}%
 Huron, D. (2006). \emph{Sweet Anticipation}. MIT Press.
