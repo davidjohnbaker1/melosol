@@ -74,7 +74,7 @@ Further addition to the metadata can be added with modifications to `metadat_add
 We describe the corpus from a macro perspective in Figure XXXX.
 Section V was removed from the top left portion of Figure XXX as the majority of melodies in the atonal section of the corpus are encoded with a zero flat, zero sharp key signature and that including those in the figure would skew C major and A minor's representitivness.
 
-![Descriptive Statistics of MeloSol](../img/descriptive_panel.png)
+![Descriptive Statistics of MeloSol](../img/figure_1.png)
 
 # Comparison 
 
@@ -84,11 +84,11 @@ Further, we compare the _MeloSol_ with the _Essen_ collection as the _Essen_ col
 Comparisons of descriptive statistics were conducted using the FANTASTIC toolbox [@mullensiefenFantasticFeatureANalysis2009]. 
 The accompanying calculations for each melody are found in `corpus/melosol_fantastic_features.csv`.
 
-![Descriptive Statistics of MeloSol](../img/comparative_descriptive_panel.png)
+![Descriptive Statistics of MeloSol](../img/figure_2a.png)
 
-![FANTASTIC Density Plots](../img/corpora_emergent.png)
+![FANTASTIC Density Plots](../img/figure_2b.png)
 
-![Huron Countour Class](../img/huron_recreation.png)
+![Huron Countour Class](../img/figure_3.png)
 
 # Useful 
 
