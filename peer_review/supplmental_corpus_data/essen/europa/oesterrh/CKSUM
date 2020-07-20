@@ -1,0 +1,128 @@
+CHEKSUMS for files from /essen/europa/oesterrh
+at https://kern.humdrum.org
+downloaded on Mon Jul 20 02:24:51 PDT 2020
+A current version of these files may be downloaded using the address:
+   https://kern.humdrum.org/data?f=zip&l=/essen/europa/oesterrh
+==================================================================
+
+The following lines list the checksum values for all score
+files in this downloaded zip archive.
+
+A "checksum" value is an error-checking mechanism that may
+assist in determining whether a file has been modified or data
+garbled due to transmission or faulty storage.  The "checksum A"
+value uses the POSIX 2 checksum algorithm.  The "checksum B" value
+uses the CCITT cyclic redundancy check algorithm.  
+
+Note that checksum commands will differ for ASCII files formatted
+in DOS/Windows style or Unix/Macintosh formatted text.  The files in
+this ZIP archive were in Unix/Macintosh line formatting style when the
+checksums were compiled.
+
+checksum A   checksum B    filename
+===================================================================
+
+2116199273 546 oestr001.krn
+1685591067 841 oestr002.krn
+3507255392 979 oestr003.krn
+3772540037 586 oestr004.krn
+2406665817 537 oestr005.krn
+3065888848 774 oestr006.krn
+18096200 573 oestr007.krn
+2301938746 566 oestr008.krn
+43434531 627 oestr009.krn
+3889597473 748 oestr010.krn
+2852124705 622 oestr011.krn
+3282526785 901 oestr012.krn
+3312054240 488 oestr013.krn
+1775049168 687 oestr014.krn
+2274444588 466 oestr015.krn
+2359061321 488 oestr016.krn
+2079501019 635 oestr017.krn
+1854432947 533 oestr018.krn
+4151087808 735 oestr019.krn
+3242579753 582 oestr020.krn
+3222041641 496 oestr021.krn
+2309056441 867 oestr022.krn
+837639979 965 oestr023.krn
+2561085768 819 oestr024.krn
+2145617368 499 oestr025.krn
+40322982 508 oestr026.krn
+2284051251 473 oestr027.krn
+2525150377 729 oestr028.krn
+2272208846 502 oestr029.krn
+2129811373 615 oestr030.krn
+699497737 556 oestr031.krn
+1228295090 489 oestr032.krn
+3235090308 929 oestr033.krn
+2563181092 560 oestr034.krn
+1567852013 685 oestr035.krn
+3541963220 674 oestr036.krn
+2497138333 519 oestr037.krn
+57989964 578 oestr038.krn
+1933767196 570 oestr039.krn
+3011880522 639 oestr040.krn
+3032084544 605 oestr041.krn
+2236460998 592 oestr042.krn
+3702205423 672 oestr043.krn
+267901889 473 oestr044.krn
+2890933968 494 oestr045.krn
+2476849039 532 oestr046.krn
+2995449938 525 oestr047.krn
+1541889963 556 oestr048.krn
+3819288233 493 oestr049.krn
+211790471 688 oestr050.krn
+667996228 535 oestr051.krn
+2706007600 477 oestr052.krn
+2289221895 510 oestr053.krn
+2367973837 699 oestr054.krn
+3193937382 630 oestr055.krn
+2609548110 665 oestr056.krn
+2013267184 560 oestr057.krn
+4060311876 558 oestr058.krn
+2208018949 529 oestr059.krn
+2565435797 725 oestr060.krn
+3684720049 1156 oestr061.krn
+581985766 738 oestr062.krn
+1478711843 707 oestr063.krn
+4226434357 576 oestr064.krn
+179504031 699 oestr065.krn
+435023418 682 oestr066.krn
+65114101 768 oestr067.krn
+2123260513 632 oestr068.krn
+3724107289 875 oestr069.krn
+582307862 880 oestr070.krn
+1889152878 597 oestr071.krn
+1549745972 553 oestr072.krn
+2071474563 573 oestr073.krn
+1237939237 555 oestr074.krn
+3439966441 767 oestr075.krn
+2917720398 586 oestr076.krn
+1528163796 630 oestr077.krn
+967727623 462 oestr078.krn
+3747983558 628 oestr079.krn
+3967070771 641 oestr080.krn
+735427306 540 oestr081.krn
+1469943176 601 oestr082.krn
+2239813032 739 oestr083.krn
+2164107302 807 oestr084.krn
+4227577146 604 oestr085.krn
+4180912194 508 oestr086.krn
+2842239712 622 oestr087.krn
+679256560 927 oestr088.krn
+3300422013 746 oestr089.krn
+1275417361 494 oestr090.krn
+1851073051 743 oestr091.krn
+2560485473 514 oestr092.krn
+3205216061 468 oestr093.krn
+920098757 489 oestr094.krn
+3355358191 725 oestr095.krn
+330419056 616 oestr096.krn
+2682309411 677 oestr097.krn
+1459209248 1170 oestr098.krn
+2254253139 909 oestr099.krn
+2588173627 713 oestr100.krn
+3654894550 571 oestr101.krn
+1690074427 742 oestr102.krn
+2643155381 606 oestr103.krn
+1747845845 543 oestr104.krn

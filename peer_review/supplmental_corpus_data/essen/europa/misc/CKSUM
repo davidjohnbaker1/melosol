@@ -1,0 +1,54 @@
+CHEKSUMS for files from /essen/europa/misc
+at https://kern.humdrum.org
+downloaded on Mon Jul 20 02:24:51 PDT 2020
+A current version of these files may be downloaded using the address:
+   https://kern.humdrum.org/data?f=zip&l=/essen/europa/misc
+==================================================================
+
+The following lines list the checksum values for all score
+files in this downloaded zip archive.
+
+A "checksum" value is an error-checking mechanism that may
+assist in determining whether a file has been modified or data
+garbled due to transmission or faulty storage.  The "checksum A"
+value uses the POSIX 2 checksum algorithm.  The "checksum B" value
+uses the CCITT cyclic redundancy check algorithm.  
+
+Note that checksum commands will differ for ASCII files formatted
+in DOS/Windows style or Unix/Macintosh formatted text.  The files in
+this ZIP archive were in Unix/Macintosh line formatting style when the
+checksums were compiled.
+
+checksum A   checksum B    filename
+===================================================================
+
+4058810758 1142 appenzel.krn
+2423350140 837 belgium1.krn
+736221237 471 brabant1.krn
+2017427050 761 eire01.krn
+127987026 667 ellas01.krn
+3586677673 604 emmenth1.krn
+1978484442 560 emmenth2.krn
+244474277 748 entlebug.krn
+1179636530 593 island01.krn
+1370348660 555 island02.krn
+1634699028 664 juedisch.krn
+4096496260 636 norge01.krn
+2207459743 702 norge02.krn
+677367292 992 oberhas1.krn
+3689304681 678 oberhas2.krn
+1792855829 1125 siebethl.krn
+2976114768 663 steier01.krn
+2414584337 540 steier02.krn
+1842143317 537 steier03.krn
+604467585 515 steier04.krn
+2892533421 519 steier05.krn
+1423613912 500 steier06.krn
+1701213661 544 steier07.krn
+496934271 690 steier08.krn
+911578773 1155 steier09.krn
+3453836070 698 steier10.krn
+3986021434 1077 steier11.krn
+3790028109 852 suomi01.krn
+2694797480 616 vlaandr1.krn
+625849330 736 vlaandr2.krn

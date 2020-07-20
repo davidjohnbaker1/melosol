@@ -4,7 +4,11 @@
 # NOTE THIS SCRIPT DOES NOT WORK YET AND
 # NEEDS TO BE MODIFIED FOR DATA REPORT PAPER 
 #--------------------------------------------------
-library(tidyverse)
+library(ggplot2)
+library(scales)
+library(readr)
+library(dplyr)
+library(magrittr)
 library(cowplot)
 library(viridis)
 
@@ -14,7 +18,9 @@ melosol_features <- read_csv("corpus/fantastic/melosol_features.csv")
 densmore_features <- read_csv("corpus/fantastic/densmore_features.csv")
 essen_features <- read_csv("corpus/fantastic/esssen_features.csv")
 #--------------------------------------------------
-
+# Magnitude comparision 
+nrow(essen_features) / nrow(melosol_features)
+nrow(densmore_features) / nrow(melosol_features)
 
 
 # Import Dist Data
@@ -102,7 +108,7 @@ melody_features %>%
   ggplot(aes(x = dataset, y = n, fill = Origin)) +
   geom_bar(stat = 'identity') +
   theme_minimal() + 
-  labs(title = "Breakdown of Corpora", x = "Corpus", y = "") +
+  labs(title = "Breakdown of Corpora", x = "Corpus", y = "Count Total of Melodies") +
   coord_flip() +
   scale_fill_viridis(discrete = TRUE) -> corpora_size_comparison
 
@@ -112,10 +118,10 @@ melody_features %>%
   select(Origin, len, dataset) %>%
   ggplot(aes(x = len, color = Origin)) +
   scale_color_viridis(discrete = TRUE) +
-  geom_density() + 
+  geom_freqpoly() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Length Density", x = "Length", y = "") -> corpora_len_comparision
+  labs(title =  "Length Density", x = "Number of Notes", y = "") -> corpora_len_comparision
 
 corpora_len_comparision
 
@@ -123,10 +129,10 @@ melody_features %>%
   select(Origin, p.range, dataset) %>%
   ggplot(aes(x = p.range, color = Origin)) +
   scale_color_viridis(discrete = TRUE) +
-  geom_density() + 
+  geom_freqpoly() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Range Density", x = "Range", y = "") -> corpora_range_comparison
+  labs(title =  "Range Density", x = "Range in Semitones", y = "") -> corpora_range_comparison
 
 corpora_range_comparison
 
@@ -137,7 +143,7 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Note Density", x = "Density") -> corpora_ndensity_comparison
+  labs(title =  "Note Density", y = "Density", x = "Number of Notes Per Second") -> corpora_ndensity_comparison
 
 corpora_ndensity_comparison
 
@@ -148,7 +154,7 @@ plot_grid(corpora_range_comparison,
 
 comparative_descriptive_panel
 
-# ggsave(filename = "img/comparative_descritive_panel.png", plot = comparative_descriptive_panel)
+ggsave(filename = "img/Figure_2.png", height = 20, width = 30, units = "cm")
 # Saving 11.6 x 8 in image
 
 # Make Huron Panel Grid 
@@ -159,7 +165,7 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Interval Entropy Density", x = "Entropy", y = "") -> corpora_ientropy_comparision
+  labs(title =  "Interval Entropy Density", subtitle = "Variant of Shannon Entropy on Discrete Intervals", x = "Entropy", y = "") -> corpora_ientropy_comparision
 
 corpora_ientropy_comparision
 
@@ -169,7 +175,9 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Tonalness Density", x = "Tonalness", y = "") -> corpora_tonalness_comparision
+  labs(title =  "Tonalness Density", y = "Density", subtitle = "Tonalness measures magnitude of the highest correlation with\nsingle key", x = "Tonalness") -> corpora_tonalness_comparision
+
+
 
 melody_features %>%
   ggplot(aes(x = tonal.clarity, color = Origin)) +
@@ -177,7 +185,7 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Tonal Clarity Density", x = "Tonal Clarity", y = "") -> corpora_tonalclarity_comparision
+  labs(title =  "Tonal Clarity Density", x = "Tonal Clarity", subtitle = "Ratio between the magnitude of the highest correlation\nin  the tonality vector and  the  second highest correlation.\nInspired by Temperly (2007)", y = "") -> corpora_tonalclarity_comparision
 
 melody_features %>%
   ggplot(aes(x = tonal.spike, color = Origin)) +
@@ -185,7 +193,7 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Tonal Spike Density", x = "Tonalspike", y = "") -> corpora_tonalspike_comparision
+  labs(title =  "Tonal Spike Density", subtitle = "Magnitude of the highest correlation divided by the sum\nof all correlation values", x = "Tonalspike", y = "") -> corpora_tonalspike_comparision
 
 corpora_tonalclarity_comparision
 corpora_tonalness_comparision
@@ -197,7 +205,7 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Durational Entropy Density", x = "Length", y = "") -> corpora_dentropy_comparision
+  labs(title =  "Durational Entropy Density", subtitle = "Variant of Shannon entropy based on note durations", x = "Entropy Calculation", y = "") -> corpora_dentropy_comparision
 
 corpora_dentropy_comparision
 
@@ -207,7 +215,8 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Countour Variation (SCGV)", x = "", y = "") -> corpora_scgv_comparision
+  labs(title =  "Step Countour Global Variation", 
+       subtitle = "Standard Deviation of Melody Contour Vector", x = "Standard Deviation", y = "") -> corpora_scgv_comparision
 
 corpora_scgv_comparision
 
@@ -218,7 +227,7 @@ plot_grid(ncol =  2, corpora_ientropy_comparision, corpora_dentropy_comparision,
           corpora_scgv_comparision) -> corpora_emergent 
 
 corpora_emergent
-#ggsave(filename = "img/corpora_emergent.png", corpora_emergent)
+ggsave(filename = "img/Figure_3.png", corpora_emergent, width = 30, height = 20, unit = "cm")
 # Saving 13.6 x 8 in image
 
 #--------------------------------------------------
@@ -229,7 +238,7 @@ melody_features %>%
   group_by(Origin, h.contour) %>%
   summarise(n = n()) %>%
   group_by(Origin) %>% 
-  mutate(perc=100*n/sum(n)) %>%
+  mutate(perc=n/sum(n)) %>%
   ggplot(aes(x = h.contour, y = perc, fill = Origin)) +
   geom_bar(stat = 'identity') +
   facet_wrap(~Origin) +
@@ -238,11 +247,12 @@ melody_features %>%
        x = "Contour Class",
        y = "") +
   scale_fill_viridis(discrete = TRUE) +
+  scale_y_continuous(labels = scales::percent) +
   coord_flip() -> corpora_contour_distribution 
 
 corpora_contour_distribution
 
-# ggsave(filename = "img/huron_recreation.png", corpora_contour_distribution)
+ggsave(filename = "img/Figure_4.png", corpora_contour_distribution, height = 20, width = 30, units = "cm")
 # Saving 13.6 x 8 in image
 #--------------------------------------------------
 # Plots this Scritp Makes

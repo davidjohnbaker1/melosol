@@ -1,0 +1,35 @@
+CHEKSUMS for files from /essen/europa/sverige
+at https://kern.humdrum.org
+downloaded on Mon Jul 20 02:24:51 PDT 2020
+A current version of these files may be downloaded using the address:
+   https://kern.humdrum.org/data?f=zip&l=/essen/europa/sverige
+==================================================================
+
+The following lines list the checksum values for all score
+files in this downloaded zip archive.
+
+A "checksum" value is an error-checking mechanism that may
+assist in determining whether a file has been modified or data
+garbled due to transmission or faulty storage.  The "checksum A"
+value uses the POSIX 2 checksum algorithm.  The "checksum B" value
+uses the CCITT cyclic redundancy check algorithm.  
+
+Note that checksum commands will differ for ASCII files formatted
+in DOS/Windows style or Unix/Macintosh formatted text.  The files in
+this ZIP archive were in Unix/Macintosh line formatting style when the
+checksums were compiled.
+
+checksum A   checksum B    filename
+===================================================================
+
+2661428477 739 sverig01.krn
+4211392964 657 sverig02.krn
+1906210893 669 sverig03.krn
+828236829 705 sverig04.krn
+102274344 635 sverig05.krn
+3451333893 744 sverig06.krn
+2262388337 689 sverig07.krn
+350547973 667 sverig08.krn
+2407532509 695 sverig09.krn
+4292457238 640 sverig10.krn
+978886563 882 sverig11.krn

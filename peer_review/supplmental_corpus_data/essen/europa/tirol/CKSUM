@@ -1,0 +1,38 @@
+CHEKSUMS for files from /essen/europa/tirol
+at https://kern.humdrum.org
+downloaded on Mon Jul 20 02:24:52 PDT 2020
+A current version of these files may be downloaded using the address:
+   https://kern.humdrum.org/data?f=zip&l=/essen/europa/tirol
+==================================================================
+
+The following lines list the checksum values for all score
+files in this downloaded zip archive.
+
+A "checksum" value is an error-checking mechanism that may
+assist in determining whether a file has been modified or data
+garbled due to transmission or faulty storage.  The "checksum A"
+value uses the POSIX 2 checksum algorithm.  The "checksum B" value
+uses the CCITT cyclic redundancy check algorithm.  
+
+Note that checksum commands will differ for ASCII files formatted
+in DOS/Windows style or Unix/Macintosh formatted text.  The files in
+this ZIP archive were in Unix/Macintosh line formatting style when the
+checksums were compiled.
+
+checksum A   checksum B    filename
+===================================================================
+
+1088341361 634 tirol01.krn
+2994454363 822 tirol02.krn
+1305077317 778 tirol03.krn
+4148597304 1056 tirol04.krn
+1048942561 517 tirol05.krn
+1491931302 730 tirol06.krn
+3542179633 857 tirol07.krn
+759419966 546 tirol08.krn
+1585618145 835 tirol09.krn
+857763231 844 tirol10.krn
+1787456375 639 tirol11.krn
+1254473936 986 tirol12.krn
+3052905316 731 tirol13.krn
+1786090078 779 tirol14.krn

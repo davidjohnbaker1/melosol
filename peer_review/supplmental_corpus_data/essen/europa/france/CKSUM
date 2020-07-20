@@ -1,0 +1,38 @@
+CHEKSUMS for files from /essen/europa/france
+at https://kern.humdrum.org
+downloaded on Mon Jul 20 02:24:51 PDT 2020
+A current version of these files may be downloaded using the address:
+   https://kern.humdrum.org/data?f=zip&l=/essen/europa/france
+==================================================================
+
+The following lines list the checksum values for all score
+files in this downloaded zip archive.
+
+A "checksum" value is an error-checking mechanism that may
+assist in determining whether a file has been modified or data
+garbled due to transmission or faulty storage.  The "checksum A"
+value uses the POSIX 2 checksum algorithm.  The "checksum B" value
+uses the CCITT cyclic redundancy check algorithm.  
+
+Note that checksum commands will differ for ASCII files formatted
+in DOS/Windows style or Unix/Macintosh formatted text.  The files in
+this ZIP archive were in Unix/Macintosh line formatting style when the
+checksums were compiled.
+
+checksum A   checksum B    filename
+===================================================================
+
+364874494 972 france01.krn
+2670019643 624 france02.krn
+1232325860 719 france03.krn
+982294390 689 france04.krn
+627303656 684 france05.krn
+3433347709 768 france06.krn
+2380055251 621 france07.krn
+2749028989 573 france08.krn
+3272331924 806 france09.krn
+258244397 779 france10.krn
+104891022 1024 france11.krn
+3431085456 508 france12.krn
+1467749354 882 france13.krn
+1960293769 596 france14.krn

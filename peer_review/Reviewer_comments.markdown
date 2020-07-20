@@ -1,5 +1,12 @@
 ## Reviewer Commments
 
+Hello Fabian
+
+- typos and grammar
+- fixed Figure 1 axes with labeling 
+- Explain statistics in text
+- Clearer comparision with other corpora 
+ 
 ### Reviewer 1 Major Comments
 
 * [ ] Paper lacks analysis required for publication 

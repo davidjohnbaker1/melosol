@@ -1,14 +1,18 @@
 #---------------------------------------------------
 # Create Descriptive Statistic Plots 
 #---------------------------------------------------
-library(tidyverse)
+library(readr)
+library(ggplot2)
+library(magrittr)
+library(dplyr)
+library(stringr)
 library(cowplot)
 library(viridis)
 #----------------------------------------------------
-meta <- read_csv("corpus/metadata/original_metadata.csv") 
+meta <- read_csv("corpus/metadata/melosol_metadata.csv") 
 fantastic_computations <- read_csv("corpus/fantastic/melosol_features.csv")
 
-melosol_metadata
+meta
 
 fantastic_computations
 
@@ -33,6 +37,9 @@ melosol_features <- meta %>%
 
 melosol_features %>%
   filter(`!!!Section` != "V") %>%
+  filter(major_minor == "MAJOR") %>%
+  mutate(Key = str_replace_all(string = Key, "-","\u266D")) %>%
+  mutate(Key = factor(Key, levels = c("C","G","D","A","E","B","F#","G♭","C#","D♭","A♭","E♭", "B♭","F"))) %>%
   ggplot(aes(x = Key)) +
   geom_bar(aes(fill = `!!!Section`)) +
   theme_minimal() +
@@ -41,11 +48,37 @@ melosol_features %>%
        x = "Key",
        y = "", fill = "Section") +
   coord_flip() +
+  theme(legend.position = "none") + 
   scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
   facet_wrap(~major_minor) +
-  scale_fill_viridis(discrete = TRUE, begin = 0, end = .8)   -> melosol_key_distribution 
+  scale_fill_viridis(discrete = TRUE, begin = 0, end = .8)   -> melosol_key_distribution_major 
 
-melosol_key_distribution
+melosol_key_distribution_major 
+#--------------------------------------------------
+
+melosol_features %>%
+  filter(`!!!Section` != "V") %>%
+  filter(major_minor == "MINOR") %>%
+  mutate(Key = str_replace_all(string = Key, "-","\u266D")) %>%
+  mutate(Key = factor(Key, levels = c("c","g","d","a","e","b","f#","g♭","c#","d♭","a♭","e♭", "b♭","f"))) %>%
+  ggplot(aes(x = Key)) +
+  geom_bar(aes(fill = `!!!Section`)) +
+  theme_minimal() +
+  theme(axis.text=element_text(size=10)) +
+  labs(title = "Key Distribution", 
+       x = "",
+       y = "", fill = "Section") +
+  coord_flip() +
+  scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
+  facet_wrap(~major_minor) +
+  expand_limits(y = c(0,60)) +
+  scale_fill_viridis(discrete = TRUE, begin = 0, end = .8)   -> melosol_key_distribution_minor 
+
+melosol_key_distribution_minor
+
+major_minor_plot <- plot_grid(melosol_key_distribution_major, melosol_key_distribution_minor)
+major_minor_plot
+
 #--------------------------------------------------
 # Length Plot
 melosol_features %>%
@@ -93,12 +126,11 @@ melosol_contour_distribution
 
 #--------------------------------------------------
 # Make Panel 
-plot_grid(melosol_key_distribution, melosol_len_distribution, 
+plot_grid(major_minor_plot, melosol_len_distribution, 
           melosol_range_distribution, melosol_contour_distribution) -> melosol_descript_panel
 
 melosol_descript_panel
-# ggsave(filename = "img/descriptive_panel.png", melosol_descript_panel)
+ggsave(filename = "img/Figure_1.png", melosol_descript_panel, height = 20, width = 30, units = "cm")
 # Saving 12.4 x 8 in image
 #--------------------------------------------------
-
 
