@@ -126,6 +126,10 @@ melody_features %>%
 corpora_len_comparision
 
 melody_features %>%
+  group_by(Origin) %>%
+  summarise(median_len = median(p.range))
+
+melody_features %>%
   select(Origin, p.range, dataset) %>%
   ggplot(aes(x = p.range, color = Origin)) +
   scale_color_viridis(discrete = TRUE) +

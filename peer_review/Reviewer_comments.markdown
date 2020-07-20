@@ -18,5 +18,11 @@ Hello Fabian
 * [ ] ADD how contrast of datasets is helpful 
 * [ ] ADD use alongside MeloSol 
 * [ ] CHANGE Key Change Plot (no -, remove minor rows from chart)
-* [ ] LABEL Axis Lables 
 
+### Reviewer 2 Comments 
+
+* akin to approximate with melosol 
+* melosol == essen == solo line bach chorales 
+* (#38, #41, #72, #207)
+
+* behavior with densmore 
