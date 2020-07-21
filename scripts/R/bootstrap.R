@@ -1,6 +1,10 @@
 # Bootstrap Analysis
 # Calculate bootstrap intervals for n-gram counts
 
+# imports in all the n-grams 
+source("scripts/R/bootstrap-import.R")
+
+# function for boot() 
 notes_bootstrap <- function(d, i){
   # get global set
   global_set <- d %>% distinct()
@@ -26,18 +30,35 @@ notes_bootstrap <- function(d, i){
 }
 
 #----------------------------------------
-# Bootstrap Proportions
-bootstraps_to_run <- 1000
-#---------
-# melosol 
-# bootstrap_analysis <- boot(melosol_ngrams, notes_bootstrap, R = bootstraps_to_run)
-# saveRDS(bootstrap_analysis, "data/melosol_boostrap.RDS")
+# Bootstrap Proportions (kept low for now)
+bootstraps_to_run <- 10
 
-melosol_tidy <- tidy(bootstrap_analysis, conf.int = TRUE, conf.method = "perc")
+bootstrap_analysis <- boot(melosol_ngrams, notes_bootstrap, R = bootstraps_to_run)
+
+# matrix of all simulations in $t object 
+bootstrap_analysis$t
+
+# this is how I'd get the CI for the first of the n-grams in the set
+# but when I run it, I get the 'Error: cannot allocate vector of size 7.8 Gb' error
+boot.ci(bootstrap_analysis, type = "bca")
+
+# then the idea is to just write a loop/function or whatever 
+# to get each n-gram and it's CI
+
+
+
+
+
+
+# This would be ideal, but when you run it, it clogs memory or something
+# melosol_tidy <- tidy(bootstrap_analysis, conf.int = TRUE, conf.method = "perc")
+
 
 melosol_tidy %>%
   arrange(desc(statistic)) %>%
   print(n = 100)
+
+# makes the boostrap plot 
 
 melosol_plot <- melosol_tidy %>%
   filter(statistic >= .001) %>%
@@ -54,10 +75,14 @@ melosol_plot
 
 #-----------------------------------------------------------------------------
 # Essen 
-# bootstrap_analysis_essen <- boot(essen_ngrams, notes_bootstrap, R = bootstraps_to_run)
-# saveRDS(bootstrap_analysis_essen, "data/essen_boostrap.RDS")
 
-essen_tidy <- tidy(bootstrap_analysis_essen, conf.int = TRUE, conf.method = "perc")
+bootstrap_analysis_essen <- boot(essen_ngrams, notes_bootstrap, R = bootstraps_to_run)
+
+# memory error here as above 
+boot.ci(boot.out = bootstrap_analysis_essen, type = "bca", index = 1)
+
+# again, this is the ideal, but get memory error
+#essen_tidy <- tidy(bootstrap_analysis_essen, conf.int = TRUE, conf.method = "perc")
 
 essen_plot <- essen_tidy %>%
   filter(statistic >= .0001) %>%
@@ -72,26 +97,11 @@ essen_plot <- essen_tidy %>%
 
 essen_plot
 
-
-
-
 #----------------------------------------------
 melosol_plot + essen_plot
 
-# -----------------------------
+#################################################################################
 # Correlation Analysis 
-
-melosol_tidy$dataset <- "melosol"
-essen_tidy$dataset <- "essen"
-
-melosol_tidy
-essen_tidy
-
-melosol_tidy %>%
-  full_join(essen_tidy, by = "term") %>%
-  filter(term != "P1") %>%
-  select(statistic.x, statistic.y) %>%
-  cor(use = "pairwise.complete.obs",method = "spearman")
 #------------------------------------------------------------------------------
 # Correlation of 3,4,5,7,9,11 grams
 
