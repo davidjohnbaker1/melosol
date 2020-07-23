@@ -8,13 +8,13 @@ In this repository, you will find the following:
 * Text of the pre-print documenting this corpus in `document/melosol_documentation.pdf`
 * Scripts used to generate all analyses and figures in `scripts` 
 
+## Figures in Document
 
-![Overview of Corpus](img/figure_1.png)
-
-## To Do 
-
-* [ ] Clean text to align with figures 
-* [ ] Update Numbering System for three digit ordering
-* [ ] Find Missing Melosol FANTASTIC melody and add it in! 
+![Overview of Corpus](img/Figure_1.png)
+![Count Data](img/Figure_2.png)
+![FANTASTIC](img/Figure_3.png)
+![Huron Contour Class](img/Figure_4.png)
+![Bootstrap Analysis](img/Figure_5.png)
+![Correlation Breakdown](img/Figure_6.png)
 
 
