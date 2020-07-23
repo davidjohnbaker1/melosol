@@ -24,8 +24,6 @@ set.seed(23423)
 ## Bigrams
 melosol_ngrams <- read.delim("corpus/ngrams/bi-gram.tsv", header = FALSE)
 names(melosol_ngrams) <- "notes"
-melosol_ngrams <- melosol_ngrams %>%
-  filter(notes != "1")
 
 melosol_trigrams <- read.delim("corpus/ngrams/melosol-tri-gram.tsv", header = FALSE)
 names(melosol_trigrams) <- "notes"

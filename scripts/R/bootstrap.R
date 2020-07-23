@@ -93,37 +93,28 @@ essen_tidy_2$corpus <- "Essen"
 plot_data <- rbind(melosol_tidy_2, essen_tidy_2)
 
 
-melosol_tidy_2 %>%
+figure_5 <- plot_data %>%
   tibble() %>%
-  # filter obvious context errors
-  filter(statistic > -5) %>%
-  ggplot(aes(x = reorder(gram, statistic), y = statistic, group = corpus, color = corpus)) +
-  geom_point(position = position_dodge(width = 1)) +
+  # filter obvious context errors, only within octave
+  filter(statistic > -1) %>%
+  filter(gram != "+9") %>%
+  ggplot(aes(x = reorder(gram, statistic), y = statistic, 
+             group = corpus, 
+             color = corpus)) +
+  geom_point(position = position_dodge(width = 1), size = 2) +
   geom_errorbar(aes(ymin = lowerlimit, ymax = upperlimit), position = position_dodge(width = 1)) +
   coord_flip() +
   theme_minimal() +
+  theme(axis.text.x  = element_text(size=15)) +
+  theme(axis.text.y  = element_text(size=15)) +
   expand_limits(y = c(-2,2)) +
-  labs(title = paste0("Melodic Interval Bi-grams"),
-       subtitle = paste(B, "Bootstrap Iterations Confidence Interval"),
+  labs(title = paste0("Melodic Interval Bigrams with Confidence Interval"),
+       subtitle = paste("100,000 Bootstrap Iterations"),
        x = "2-gram",
        y = "Log Mean Percent",
        color = "Corpus") +
   scale_color_viridis(discrete = TRUE, begin = .25, end = 1)
 
+figure_5
 
-plot_data7 %>%
-  tibble() %>%
-  # filter obvious context errors
-  filter(statistic > -5) %>%
-  ggplot(aes(x = reorder(gram, statistic), y = statistic, group = corpus, color = corpus)) +
-  geom_point(position = position_dodge(width = 1)) +
-  geom_errorbar(aes(ymin = lowerlimit, ymax = upperlimit), position = position_dodge(width = 1)) +
-  coord_flip() +
-  theme_minimal() +
-  expand_limits(y = c(-2,2)) +
-  labs(title = paste0("Melodic Interval Bi-grams"),
-       subtitle = paste(B, "Bootstrap Iterations Confidence Interval"),
-       x = "2-gram",
-       y = "Log Mean Percent",
-       color = "Corpus") +
-  scale_color_viridis(discrete = TRUE, begin = .25, end = 1)
+ggsave(filename = "img/Figure_5.png", figure_5, height = 12, width = 24, units = "cm")
