@@ -1,0 +1,101 @@
+I first of all thank the author for their updates. 
+They have done much to address the concerns from my first review, particularly having added a short description for all of the figures included. 
+The paper clearly represents a worthwhile contribution to the field, but does not yet meet the standards required for publication in my opinion.
+
+I have some specific comments, listed below.
+
+- Sometimes "semitone" is used, and sometimes "half-step" is used. I have no preference, but this should be consistent.
+* FIXED 
+
+
+Summary:
+"using the metadata_adder.R found" -> "using the metadata_adder.R script found"
+* FIXED 
+
+Comparison:
+para 2: "--" should be an em dash in 2 places.
+*  FIXED 
+
+"""
+The range density of the Asian and European subsets of the Essen center as measured via 
+the median around pitch ranges of 17 and 12 semitones respectively.
+"""
+This sentence could be reworded. Maybe "
+
+The range density of the Asian and European subsets of the Essen 
+corpus have median pitch ranges of 17 and 12 semitones respectively."
+*  FIXED 
+
+"""
+The Densmore appears to have some distinct peaks of the range values from the frequency plots which is contrasted with no clear peaks emerging from the MeloSol.
+"""
+I only see one clear peak in Densmore (11), not "some". It looks like the main difference is the lack of any ranges of 12 in Densmore.
+* Fixed 
+
+
+"""
+lower degree of durational entropy (which can be roughly understood as rhythmic entropy) again reflecting the unique pedagogical nature of this corpus
+"""
+
+This seems only to be true in comparison to Densmore. 
+It is very similar to Essen, particularly the European split. 
+That should be clarified/corrected.
+* Fixed
+
+"""
+In Figure 4 I recreate the analyses on the nine proposed contour classes over the entire melodies from the Essen, Densmore, and MeloSol since the MeloSol corpus does not have phrase markings needed to exactly replicate the first analysis from Huron (1996).
+"""
+This would be clearer as: "
+
+Since the MeloSol corpus does not have the phrase markings 
+needed to exactly replicate the first analysis from Huron (1996), 
+Figure 4 recreates the analysis of the nine proposed contour classes 
+over the entire melodies from the compared corpora."
+* FIXED 
+
+"""
+Despite the almost logarithmic difference in size, Figure 5 displays the stability of relative logarithmic proportions of melodic interval bigrams measured in half-steps in both the Essen and MeloSol corpora along with bootstrap confidence intervals (R = 100,000) for each proportion parameter. Said another, way Figure 5 demonstrates that the interval bigrams in the corpora share very similar properties in terms of how frequently they occur. The near matching of intervals suggests a high degree of stability given shorter transitional probabilities. 
+"""
+The description of figure 5 is unclear to me, particularly these sentences. Maybe they can be re-worded to clarify:
+- What are "melodic interval bigrams"? Are they bigrams of pitches (between which are a single interval), or are they bi-grams of intervals, and the values in the figure are differrences between consecutive intervals?
+- What is meant by "relative logarithmic proportions"? Proportions should be on the range (0, 1), which would put their logs on the range (-infinity, 0). However, the numbers on the plot go much higher than this.
+* Fixed 
+
+In Figure 6, what are the n-grams? Are they n consecutive intervals?
+* Fixed 
+
+Acknowledgements:
+"about about" -> "about"
+* Fixed 
+
+
+-------------------------------------------------------------------------------
+Figures:
+Many of the plots are missing axis labels. Every plot should have labeled axes.
+
+Figure 1:
+-What is the ordering of the keys in the top left?
+-Is it assumed that readers will know what "Huron contour class" is? 
+The text referencing this figure should refer readers to further down in the text where they are defined.
+* FIXED
+
+Figure 2:
+Missing axes in top row.
+* FIXED
+
+Figure 3:
+Only one figure has vertical axis labeled.
+* FIXED
+
+Figure 5:
+- Why do the points not align in rows?
+- How is the vertical axis ordered? Does not seem to be by either Essen or Meolosol.
+- What is log mean percent? If percent < 1, log should be < 0?
+- What are these 2-grams? Is it the difference between consecutive intervals? Or the interval between consecutive pitches?
+- The label "1" should be "+1".
+* Fixing
+
+Figure 6:
+"Length of melodic interval"? Is this the interval between notes that are n notes apart? 
+Please elaborate in the text.
+* Fixed 

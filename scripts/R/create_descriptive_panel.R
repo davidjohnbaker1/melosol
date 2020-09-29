@@ -46,7 +46,7 @@ melosol_features %>%
   theme(axis.text=element_text(size=10)) +
   labs(title = "Key Distribution", 
        x = "Key",
-       y = "", fill = "Section") +
+       y = "Frequency Count", fill = "Section") +
   coord_flip() +
   theme(legend.position = "none") + 
   scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
@@ -66,8 +66,8 @@ melosol_features %>%
   theme_minimal() +
   theme(axis.text=element_text(size=10)) +
   labs(title = "Key Distribution", 
-       x = "",
-       y = "", fill = "Section") +
+       x = "Key",
+       y = "Frequency Count", fill = "Section") +
   coord_flip() +
   scale_x_discrete(guide = guide_axis(n.dodge = 2)) +
   facet_wrap(~major_minor) +
@@ -90,7 +90,7 @@ melosol_features %>%
   scale_fill_viridis(discrete = TRUE) + 
   labs(title = "Length Distribution", 
        x = "Number of Notes",
-       y =  "",
+       y =  "Frequency Count",
        fill = "Section") -> melosol_len_distribution 
 
 melosol_len_distribution
@@ -105,7 +105,7 @@ melosol_features %>%
   scale_fill_viridis(discrete = TRUE) +
   labs(title = "Range Distribution", 
        x = "Range in Semitones",
-       y = "", fill = "Section") -> melosol_range_distribution 
+       y = "Frequency Count", fill = "Section") -> melosol_range_distribution 
 
 melosol_range_distribution
 #--------------------------------------------------
@@ -116,9 +116,9 @@ melosol_features %>%
   ggplot(aes(x = h.contour)) +
   geom_bar(aes(fill = `!!!Section`)) +
   theme_minimal() +
-  labs(title = "Huron Contour Class", 
+  labs(title = "Huron Contour Class",
        x = "Contour Class",
-       y = "", fill = "Section") +
+       y = "Frequency Count", fill = "Section") +
   scale_fill_viridis(discrete = TRUE) +
   coord_flip() -> melosol_contour_distribution 
 

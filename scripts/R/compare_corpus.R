@@ -108,7 +108,7 @@ melody_features %>%
   ggplot(aes(x = dataset, y = n, fill = Origin)) +
   geom_bar(stat = 'identity') +
   theme_minimal() + 
-  labs(title = "Breakdown of Corpora", x = "Corpus", y = "Count Total of Melodies") +
+  labs(title = "Breakdown of Corpora", x = "Corpus", y = "Frequency Count") +
   coord_flip() +
   scale_fill_viridis(discrete = TRUE) -> corpora_size_comparison
 
@@ -121,7 +121,7 @@ melody_features %>%
   geom_freqpoly() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Length Density", x = "Number of Notes", y = "") -> corpora_len_comparision
+  labs(title =  "Length Density", x = "Number of Notes", y = "Frequency Count") -> corpora_len_comparision
 
 corpora_len_comparision
 
@@ -136,7 +136,7 @@ melody_features %>%
   geom_freqpoly() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Range Density", x = "Range in Semitones", y = "") -> corpora_range_comparison
+  labs(title =  "Range Density", x = "Range in Semitones", y = "Frequency Count") -> corpora_range_comparison
 
 corpora_range_comparison
 
@@ -169,7 +169,10 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Interval Entropy Density", subtitle = "Variant of Shannon Entropy on Discrete Intervals", x = "Entropy", y = "") -> corpora_ientropy_comparision
+  labs(title =  "Interval Entropy Density", 
+       subtitle = "Variant of Shannon Entropy on Discrete Intervals", 
+       x = "Entropy", 
+       y = "Kernel Density Estimate") -> corpora_ientropy_comparision
 
 corpora_ientropy_comparision
 
@@ -179,9 +182,10 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Tonalness Density", y = "Density", subtitle = "Tonalness measures magnitude of the highest correlation with\nsingle key", x = "Tonalness") -> corpora_tonalness_comparision
-
-
+  labs(title =  "Tonalness Density", 
+       y = "Kernel Density Estimate", 
+       subtitle = "Tonalness measures magnitude of the highest correlation with\nsingle key", 
+       x = "Tonalness") -> corpora_tonalness_comparision
 
 melody_features %>%
   ggplot(aes(x = tonal.clarity, color = Origin)) +
@@ -189,7 +193,10 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Tonal Clarity Density", x = "Tonal Clarity", subtitle = "Ratio between the magnitude of the highest correlation\nin  the tonality vector and  the  second highest correlation.\nInspired by Temperly (2007)", y = "") -> corpora_tonalclarity_comparision
+  labs(title =  "Tonal Clarity Density", 
+       x = "Tonal Clarity", 
+       y = "Kernel Density Estimate", 
+       subtitle = "Ratio between the magnitude of the highest correlation\nin  the tonality vector and  the  second highest correlation.\nInspired by Temperly (2007)") -> corpora_tonalclarity_comparision
 
 melody_features %>%
   ggplot(aes(x = tonal.spike, color = Origin)) +
@@ -197,7 +204,9 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Tonal Spike Density", subtitle = "Magnitude of the highest correlation divided by the sum\nof all correlation values", x = "Tonalspike", y = "") -> corpora_tonalspike_comparision
+  labs(title =  "Tonal Spike Density", y = "Kernel Density Estimate",  
+       subtitle = "Magnitude of the highest correlation divided by the sum\nof all correlation values", 
+       x = "Tonalspike") -> corpora_tonalspike_comparision
 
 corpora_tonalclarity_comparision
 corpora_tonalness_comparision
@@ -209,7 +218,9 @@ melody_features %>%
   geom_density() + 
   theme_minimal() + 
   theme(legend.position = "none") +
-  labs(title =  "Durational Entropy Density", subtitle = "Variant of Shannon entropy based on note durations", x = "Entropy Calculation", y = "") -> corpora_dentropy_comparision
+  labs(title =  "Durational Entropy Density",  y = "Kernel Density Estimate", 
+       subtitle = "Variant of Shannon entropy based on note durations", 
+       x = "Entropy Calculation") -> corpora_dentropy_comparision
 
 corpora_dentropy_comparision
 
@@ -220,7 +231,7 @@ melody_features %>%
   theme_minimal() + 
   theme(legend.position = "none") +
   labs(title =  "Step Countour Global Variation", 
-       subtitle = "Standard Deviation of Melody Contour Vector", x = "Standard Deviation", y = "") -> corpora_scgv_comparision
+       subtitle = "Standard Deviation of Melody Contour Vector", x = "Standard Deviation",  y = "Kernel Density Estimate") -> corpora_scgv_comparision
 
 corpora_scgv_comparision
 

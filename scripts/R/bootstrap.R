@@ -53,7 +53,7 @@ for (gram in essen_2gram_list){
   datalist_essen[[gram]] <- dat
 }
 
-saveRDS(object = datalist_essen, file = "data/esseb_bigram_100000_boostrap.RDS")
+#saveRDS(object = datalist_essen, file = "data/esseb_bigram_100000_boostrap.RDS")
 
 datalist_essen <- readRDS(file = "data/melosol_bigram_100000_boostrap.RDS")
 
@@ -97,6 +97,7 @@ figure_5 <- plot_data %>%
   tibble() %>%
   # filter obvious context errors, only within octave
   filter(statistic > -1) %>%
+  mutate(gram = str_replace_all(string = gram, "1","+1")) %>%
   filter(gram != "+9") %>%
   ggplot(aes(x = reorder(gram, statistic), y = statistic, 
              group = corpus, 
@@ -116,5 +117,12 @@ figure_5 <- plot_data %>%
   scale_color_viridis(discrete = TRUE, begin = .25, end = 1)
 
 figure_5
+
+# Figure 5:                                                                       
+# Why do the points not align in rows?  (answered in text)                                
+# How is the vertical axis ordered? Does not seem to be by either Essen or Meolosol. (relative appearance)
+# What is log mean percent? If percent < 1, log should be < 0?                   
+# What are these 2-grams? Is it the difference between consecutive intervals? Or the interval between consecutive pitc (put in text)
+# The label "1" should be "+1".
 
 ggsave(filename = "img/Figure_5.png", figure_5, height = 12, width = 24, units = "cm")
