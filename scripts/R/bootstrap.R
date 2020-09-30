@@ -3,6 +3,10 @@
 # Calculate bootstrap intervals for n-gram counts
 set.seed(42, sample.kind = "Rounding")
 library(viridis)
+library(magrittr)
+library(ggplot2)
+library(dplyr)
+library(stringr)
 
 # imports in all the n-grams 
 source("scripts/R/bootstrap-import.R")
@@ -55,7 +59,7 @@ for (gram in essen_2gram_list){
 
 #saveRDS(object = datalist_essen, file = "data/esseb_bigram_100000_boostrap.RDS")
 
-datalist_essen <- readRDS(file = "data/melosol_bigram_100000_boostrap.RDS")
+datalist_essen <- readRDS(file = "data/esseb_bigram_100000_boostrap.RDS")
 
 #-------------------------------------------------------------------------------
 # Take Bootstraps and Make into nice tidy tables 
