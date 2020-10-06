@@ -87,7 +87,7 @@ figure_6 <- cor_data_for_plot %>%
                               " 7-gram",""," 9-gram","","11-gram", "")) +
   labs(title = "Correlation Between MeloSol and Essen n-grams",
        y = expression(paste("Spearman's ", rho)),
-       x = "Length of Melodic Interval Measured in Half Steps" )
+       x = "Length of Melodic Interval Measured in Semitones" )
 
 figure_6
 
