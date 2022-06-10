@@ -11,7 +11,7 @@ This means the repository also contains the entire [Densmore](https://kern.humdr
 For each of the three datasets used, there also exists a directory of 38 extracted features in `corpus/fantastic` that were created using the [FANTASTIC](http://www.doc.gold.ac.uk/isms/m4s/FANTASTIC_docs.pdf) toolbox.
 These computations form the basis of the figures that appear in the paper and below. 
 
-Please cite the EMR data report when using this corpus (and [email me to let me know someone's using it](mailto:davidjohnbaker1@gmail.com).
+Please cite the EMR data report when using this corpus (and [email me to let me know someone's using it](mailto:davidjohnbaker1@gmail.com)).
 
 > Baker, D. (2021). MeloSol corpus. Empirical Musicology Review, 16(1), 106-113.
 
